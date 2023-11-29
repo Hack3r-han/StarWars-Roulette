@@ -55,7 +55,7 @@ window.onload = function() {
     localStorage.setItem('userNames', JSON.stringify(names));
   }
   
-    
+  // generator-index.html  
   // Function to pick a random name from the saved list
   function pickRandomName() {
     const savedNames = localStorage.getItem('userNames');
