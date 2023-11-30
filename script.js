@@ -1,71 +1,71 @@
 // Función para agregar un nombre a la lista
 
-  function addName() { //línea 12 del HTML - la función se activa al hacer clic en el botón Agregar
-    const nameInput = document.getElementById('nameInput'); //línea 11 del HTML
-    const nameList = document.getElementById('nameList'); //línea 13 del HTML
+  function agregarNombre() { //línea 12 del HTML - la función se activa al hacer clic en el botón Agregar
+    const nombreInput = document.getElementById('nombreInput'); //línea 11 del HTML
+    const nombreLista = document.getElementById('nombreLista'); //línea 13 del HTML
   
-    if (nameInput.value !== '') { //comprueba que el valor de entrada no esté vacío
-      const listItem = document.createElement('li'); //crea un nuevo elemento de lista, una variable vacía para contener los datos
-      listItem.textContent = nameInput.value; //establece el contenido de la variable vacía con el nombre ingresado (input)
-      listItem.addEventListener('click', function() { 
+    if (nombreInput.value !== '') { //comprueba que el valor de entrada no esté vacío
+      const listaElemento = document.createElement('li'); //crea un nuevo elemento de lista, una variable vacía para contener los datos
+      listaElemento.textContent = nombreInput.value; //establece el contenido de la variable vacía con el nombre ingresado (input)
+      listaElemento.addEventListener('click', function() { 
         this.parentNode.removeChild(this); //Eliminar el listaElemento si se hace clic
-        saveNames(); //Guardar la lista actualizada en localStorage. Ver la función guardarNombres() a continuación
+        guardarNombres(); //Guardar la lista actualizada en localStorage. Ver la función guardarNombres() a continuación
       });
-      nameList.appendChild(listItem); //agregar el listaElemento creada a la lista visible
-      nameInput.value = ''; //borrar el campo de entrada después de agregar un nombre
+      nombreLista.appendChild(listaElemento); //agregar el listaElemento creada a la lista visible
+      nombreInput.value = ''; //borrar el campo de entrada después de agregar un nombre
   
-      saveNames(); //Guardar la lista actualizada en localStorage inmediatamente después de agregar un nombre
+      guardarNombres(); //Guardar la lista actualizada en localStorage inmediatamente después de agregar un nombre
     } else {
       alert('Por favor ingrese un nombre.');
     }
   }
   
-  //Función para guardar nombres en localStorage desde nameList
-  function saveNames() {
-    const nameList = document.getElementById('nameList');  //línea 15 del HTML
-    const names = []; //Inicializar un array vacío para almacenar los nombres
+  //Función para guardar nombres en localStorage desde nombreLista
+  function guardarNombres() {
+    const nombreLista = document.getElementById('nombreLista');  //línea 15 del HTML
+    const nombres = []; //Inicializar un array vacío para almacenar los nombres
   
-    nameList.childNodes.forEach(node => { //iterar a través de elementos en nameList
+    nombreLista.childNodes.forEach(node => { //iterar a través de elementos en nombreLista
       if (node.textContent.trim() !== '') {
-        names.push(node.textContent.trim()); //trims los elementos y los agrega al array
+        nombres.push(node.textContent.trim()); //trims los elementos y los agrega al array
       }
     });
   
-    localStorage.setItem('userNames', JSON.stringify(names)); //guardar el array en localStorage con el llave userNames
+    localStorage.setItem('nombresUsuarios', JSON.stringify(nombres)); //guardar el array en localStorage con el llave nombresUsuarios
   }
   
   //Función para elegir un nombre aleatorio de la lista en localStorage
-  function pickRandomName() {
-    const savedNames = localStorage.getItem('userNames'); //recuperar elementos de localStorage
-    const randomResult = document.getElementById('randomResult'); //línea 15 del HTML
+  function elegirNombreRandom() {
+    const nombresGuardados = localStorage.getItem('nombresUsuarios'); //recuperar elementos de localStorage
+    const randomResultado = document.getElementById('randomResultado'); //línea 15 del HTML
   
-    if (savedNames) {
-      const namesArray = JSON.parse(savedNames); //parse los nombres guardados en un array
+    if (nombresGuardados) {
+      const nombresArray = JSON.parse(nombresGuardados); //parse los nombres guardados en un array
   
-      if (namesArray.length > 0) {
-        const randomIndex = Math.floor(Math.random() * namesArray.length);
-        const randomName = namesArray[randomIndex];
+      if (nombresArray.length > 0) {
+        const randomIndice = Math.floor(Math.random() * nombresArray.length);
+        const randomNombre = nombresArray[randomIndice];
   
         //Eliminar el nombre seleccionado de la lista
-        namesArray.splice(randomIndex, 1);
+        nombresArray.splice(randomIndice, 1);
   
         //Actualizar localStorage con la lista modificada
-        localStorage.setItem('userNames', JSON.stringify(namesArray));
+        localStorage.setItem('nombresUsuarios', JSON.stringify(nombresArray));
 
         //Actualizar la lista visible eliminando el nombre seleccionado
-        const listItems = nameList.getElementsByTagName('li');
-        for (let i = 0; i < listItems.length; i++) {
-          if (listItems[i].textContent === randomName) {
-            nameList.removeChild(listItems[i]);
+        const listaElementos = nombreLista.getElementsByTagName('li');
+        for (let i = 0; i < listaElementos.length; i++) {
+          if (listaElementos[i].textContent === randomNombre) {
+            nombreLista.removeChild(listaElementos[i]);
             break; //stop después de eliminar la primera aparición (para manejar duplicados)
           }
       }
   
-        randomResult.textContent = `${randomName}, eres el Elegido.`;
+        randomResultado.textContent = `${randomNombre}, eres el Elegido.`;
       } else {
-        randomResult.textContent = 'No quedan nombres.';
+        randomResultado.textContent = 'No quedan nombres.';
       }
     } else {
-      randomResult.textContent = 'No hay nombres guardados.';
+      randomResultado.textContent = 'No hay nombres guardados.';
     }
   }
