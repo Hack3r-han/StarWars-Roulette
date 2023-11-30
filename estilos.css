@@ -1,0 +1,31 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+img {
+    width: 400px;
+}
+.container {
+    text-align: center;
+}
+
+#nameDisplay {
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button {
+    background-color: rgb(94, 91, 91);
+    border-radius: 30px;
+    font-size: 22px;
+    padding: 10px 10px;
+    margin-top: 20px;
+    cursor: pointer;
+}
