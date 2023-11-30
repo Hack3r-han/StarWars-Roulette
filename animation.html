@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+   <div class="list">
+        <h4>Enter Name</h4>
+        <p>Name added</p>
+      
+        <h3 id="h3"> </h3>
+        <br>
+   </div>
+   
+        <input type="text" placeholder="name" id="inputName">
+        <button id="add" >add name</button>
+        <button id="delete" >delete name</button>
+        <br>
+
+        <h3>List Names</h3>
+        <p id="names"></p>
+  
+
+<script>
+    let names = [];
+    function getName() { 
+    let inputName = document.querySelector("#inputName");
+    let name = inputName.value
+    document.querySelector("h3").innerHTML = name;
+    names.push(name)
+        inputName.value = " "
+        document.querySelector("#names").textContent = names   
+    }
+
+    localStorage.setItem("name", "Paol");
+
+   
+    let p = localStorage.getItem("name", "Pa");
+    console.log(p)
+
+    // function deleteName(){
+    //     let inputName = document.querySelector("#inputName");
+    //     let name = inputName.value
+       
+    //     var names = ["jo","hi"]
+    //     console.log(names)
+    //     for(name1 in names){
+    //         let inputName = document.querySelector("#inputName");
+    //         if( name1 === inputName.value){
+    //             names.pop()
+    //         }
+    //     }
+    // }
+
+   document.querySelector("#add").addEventListener("click", getName)
+
+//    document.querySelector("#delete").addEventListener("click", deleteName)
+
+  
+
+   
+
+
+   
+</script>
+</body>
+</html>
