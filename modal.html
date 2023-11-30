@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <link rel="stylesheet" href="modal-styles.css">
+   
+</head>
+<body>
+
+<!-- Trigger/Open The Modal -->
+<button id="myBtn">Nombres</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+      <div class="list">  
+        <h3 id="h3"> </h3>
+        <input type="text" placeholder="name" id="inputName">
+        <button id="add" >add name</button>
+        <button id="delete" >delete name</button>
+        <h3>List Names</h3>
+        <p id="names"></p>      
+      </div>   
+    </div>
+  </div>
+
+  <script src="modal.js"></script>
+  </body>
+</html>
