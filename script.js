@@ -20,7 +20,8 @@
     }
   }
   
-  //Función para guardar nombres en localStorage desde nombreLista
+//Función para guardar nombres en localStorage desde nombreLista
+
   function guardarNombres() {
     const nombreLista = document.getElementById('nombreLista');  //línea 15 del HTML
     const nombres = []; //Inicializar un array vacío para almacenar los nombres
@@ -34,7 +35,8 @@
     localStorage.setItem('nombresUsuarios', JSON.stringify(nombres)); //guardar el array en localStorage con el llave nombresUsuarios
   }
   
-  //Función para elegir un nombre aleatorio de la lista en localStorage
+//Función para elegir un nombre aleatorio de la lista en localStorage
+
   function elegirNombreRandom() {
     const nombresGuardados = localStorage.getItem('nombresUsuarios'); //recuperar elementos de localStorage
     const randomResultado = document.getElementById('randomResultado'); //línea 15 del HTML
