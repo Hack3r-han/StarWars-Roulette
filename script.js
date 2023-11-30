@@ -1,41 +1,19 @@
-// names-index.html
-
-// Function to load saved names when the page loads
-window.onload = function() {
-    const savedNames = localStorage.getItem('userNames');
-    const nameList = document.getElementById('nameList');
+// Function to add a name to the list
+  function addName() { 
+    const nameInput = document.getElementById('nameInput'); 
+    const nameList = document.getElementById('nameList'); 
   
-    if (savedNames) {
-      const namesArray = JSON.parse(savedNames);
-  
-      namesArray.forEach(name => {
-        const listItem = document.createElement('li');
-        listItem.textContent = name;
-        listItem.addEventListener('click', function() {
-          this.parentNode.removeChild(this); // Remove the clicked name
-          saveNames(); // Save updated list to localStorage
-        });
-        nameList.appendChild(listItem);
-      });
-    }
-  }
-  
-  // Function to add a name to the list
-  function addName() {
-    const nameInput = document.getElementById('nameInput');
-    const nameList = document.getElementById('nameList');
-  
-    if (nameInput.value !== '') {
+    if (nameInput.value !== '') { 
       const listItem = document.createElement('li');
-      listItem.textContent = nameInput.value;
-      listItem.addEventListener('click', function() {
-        this.parentNode.removeChild(this); // Remove the clicked name
-        saveNames(); // Save updated list to localStorage
+      listItem.textContent = nameInput.value; 
+      listItem.addEventListener('click', function() { 
+        this.parentNode.removeChild(this); 
+        saveNames(); 
       });
-      nameList.appendChild(listItem);
-      nameInput.value = '';
+      nameList.appendChild(listItem); 
+      nameInput.value = ''; 
   
-      saveNames(); // Save updated list to localStorage immediately after adding a name
+      saveNames(); 
     } else {
       alert('Por favor ingrese un nombre.');
     }
@@ -55,12 +33,10 @@ window.onload = function() {
     localStorage.setItem('userNames', JSON.stringify(names));
   }
   
-  // generator-index.html  
-  // Function to pick a random name from the saved list
+  // Function to pick a random name from  the list in localStorage
   function pickRandomName() {
     const savedNames = localStorage.getItem('userNames');
     const randomResult = document.getElementById('randomResult');
-    const nameList = document.getElementById('nameList');
   
     if (savedNames) {
       const namesArray = JSON.parse(savedNames);
@@ -74,6 +50,15 @@ window.onload = function() {
   
         // Update localStorage with the modified list
         localStorage.setItem('userNames', JSON.stringify(namesArray));
+
+        // Update the visible list, remove the selected name
+        const listItems = nameList.getElementsByTagName('li');
+        for (let i = 0; i < listItems.length; i++) {
+          if (listItems[i].textContent === randomName) {
+            nameList.removeChild(listItems[i]);
+            break;
+          }
+      }
   
         randomResult.textContent = `${randomName}, eres el Elegido.`;
       } else {
