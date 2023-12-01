@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+body {
+    height: 100vh;
+    margin: 0;
+    background-image: url('images/bg-img.png');
+    /* background-repeat: no-repeat; */ 
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    background-color: #000000;
+	display: flex;
+  	justify-content: center;
+}
+
+.section-principal{
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imgLogo {
+    height: 8em;
+}
+
+.instrucciones {
+    color: #4BD5EE;
+    font-family: 'Roboto-bold', sans-serif;
+    font-size: 140%;
+    text-align: center;
+}
+
+/* BUTONES */
+
+button{
+    background: none;
+    border: none;
+}
+
+input[type=text]{
+    padding: 5%;
+	font-size: 1em;
+	border-radius: 30px;
+	border: 2px solid #FFA800;
+    background-color: rgba(241, 91, 21, 0.7);
+}
+
+input::placeholder{
+    font-family: 'Roboto-bold', sans-serif;
+    color: #F4DB00;
+}
+
+#agregar-btn{
+    font-family: 'Roboto-bold', sans-serif;
+    text-align: center;
+	padding: 5%;
+	text-decoration: none;
+	color: #F4DB00;
+	font-size: 1em;
+	border-radius: 30px;
+	border: 2px solid #FFA800;
+    background-color: rgba(241, 91, 21, 0.7);
+}
+
+#agregar-btn:hover{
+    background-color: rgb(186, 61, 3);
+}
+
+.img-btns{
+    height: 5em;
+}
+
+/* TEXTO DE LISTA */
+
+#nombreLista, #randomResultado{
+    color: white;
+    font-family: 'Roboto-bold', sans-serif;
+    font-size: 1em;
+}
