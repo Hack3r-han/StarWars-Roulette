@@ -39,9 +39,32 @@
 
   function elegirNombreRandom() {
     const nombresGuardados = localStorage.getItem('nombresUsuarios'); //recuperar elementos de localStorage
-    const randomResultado = document.getElementById('randomResultado'); //línea 15 del HTML
+    const randomResultado = document.getElementById('randomResultado'); //línea 15 del HTML - obtener el elemento donde se mostrará el resultado del nombre aleatorio
+
+    //EL CODIGO QUE NO FUNCIONA - para establecer una lista de nombres predeterminados
+
+    const nombreLista = document.getElementById('nombreLista');
+
+    if (!nombresGuardados) { //Comprobar si NO hay nombres guardados en localStorage
+       const predeterminedNames = ["Paolo", "Laudy", "Alba", "Hannah", "David"];
   
-    if (nombresGuardados) {
+       localStorage.setItem('nombresUsuarios', JSON.stringify(predeterminedNames));
+  
+       predeterminedNames.forEach(nombre => {
+         const listaElemento = document.createElement('li');
+         listaElemento.textContent = nombre;
+         listaElemento.addEventListener('click', function() {
+           nombreLista.removeChild(listaElemento);
+           guardarNombres();
+        });
+         nombreLista.appendChild(listaElemento);
+       });
+      } else { //si hay nombres guardados en localStorage
+
+    //FINAL DE CODIGO QUE NO FUNCIONA
+
+
+      if (nombresGuardados) { 
       const nombresArray = JSON.parse(nombresGuardados); //parse los nombres guardados en un array
   
       if (nombresArray.length > 0) {
@@ -71,3 +94,4 @@
       randomResultado.textContent = 'No hay nombres guardados.';
     }
   }
+}
