@@ -16,14 +16,23 @@
   </header>
 
   <section>
-  <div class="container">
-    <h1>Quién será el Elegido?</h1>
+
+    <div class="instrucciones">
+      <p>Es hora de decidir quién serán los Elegidos. <br> Ingrese tus nombres a continuación.</p>
+    </div>
+
+    <div>
     <input type="text" id="nombreInput" placeholder="Ingrese un nombre">
     <button onclick="agregarNombre()">Agregar</button>
     <ul id="nombreLista"></ul> <!--registra visiblemente la lista en la página-->
     <button onclick="elegirNombreRandom()"><img src="images/play-btn.png" alt="Botón" style="height: 5em"></button>
-    <p id="randomResultado"></p>
-  </div>
+    <p id="randomResultado"></p> <!--registra visiblemente el Elegido en la página-->
+    </div>
+
+    <div class="instrucciones">
+      <p>¡Haz clic en el botón para generar tu nombre aleatorio! <br> Qué la fuerza te acompañe.</p>
+    </div>
+
   </section>
 
   <script src="script.js"></script>
