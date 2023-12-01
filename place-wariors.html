@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLaceWariors</title>
+    <!-- <style>
+        #box01 {
+            width: 80px;
+            height: 80px;
+            background-color: yellow;
+        }
+        #box02 {
+            width: 80px;
+            height: 80px;
+            background-color: orangered;
+        }
+        #box03 {
+            width: 80px;
+            height: 80px;
+            background-color: greenyellow;
+        }
+        #box04{
+            width: 80px;
+            height: 80px;
+            background-color: grey;
+        }
+        #box05 {
+            width: 80px;
+            height: 80px;
+            background-color: blue;
+        }
+        h4 {
+            text-align: center;
+            margin-top: 2rem;
+            
+        }
+
+        .pulse {
+            animation: pulse-animation .8s infinite;
+        }
+
+        @keyframes pulse-animation {
+        0% {
+            box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+        }
+        100% {
+            box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+        }
+        }
+
+
+
+    </style> -->
+
+    <style>
+        div {
+            background-color: aquamarine;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+
+</head>
+<body>
+
+    
+
+    <!-- <div id="box01" class="pulse">
+        <h4 class="warior"></h4>
+
+    </div> -->
+
+    <div class="container">
+
+    </div>
+    
+
+    <script>
+        // const wariors = ["David","Laudy","Hannah", "Paolo", "Alba"];
+        
+        // function chooseWarior(){
+        //     let index = Math.floor(Math.random()* wariors.length);
+        //     let warior = document.querySelector(".warior");
+        //     warior.textContent = wariors[index]
+        // }
+
+
+
+        
+
+        // let randomNumber = Math.floor(Math.random()* 500)
+        // let positionTop  = `${randomNumber}px`
+        // let positionLeft = `${randomNumber}px`
+        // box01 = document.querySelector("#box01");
+        // box01.style.position = "absolute";
+        // box01.style.top = positionTop;
+        // box01.style.left = positionLeft;
+        // box01.style["border-radius"] = "50%";
+
+        // chooseWarior()
+
+
+        //const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+
+        function createDivs() {
+        const container = document.querySelector('.container');
+        
+        for (let i = 0; i < 10; i++) { // Creating 10 divs for example
+            const div = document.createElement('div');
+            div.className = 'random-div';
+            container.appendChild(div);
+            
+            // Generate random X and Y coordinates
+            const randomX = Math.floor(Math.random() * window.innerWidth);
+            const randomY = Math.floor(Math.random() * window.innerHeight);
+            
+            // Set position for the div
+            div.style.position = 'absolute';
+            div.style.left = `${randomX}px`;
+            div.style.top = `${randomY}px`;
+            
+            // Optionally, you can add content or styles to the divs
+            // div.textContent = `Div ${i+1}`;
+            // div.style.backgroundColor = 'lightblue';
+            // div.style.padding = '10px';
+            // div.style.border = '1px solid black';
+        }
+        }
+
+        createDivs()
+
+// Call the function to create divs when the window loads
+// window.onload = createDivs;
+
+       
+    </script>
+</body>
+</html>
