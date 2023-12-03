@@ -73,7 +73,6 @@ input::placeholder{
     background-color: rgba(170, 185, 41, 0.7); /* Cambia color*/
 }
 
-
 /* para todos los botones*/
 button{
     background: none;
@@ -85,10 +84,32 @@ button{
 
 /* TEXTO DE LISTA */
 
-#nombreLista, #randomResultado{
+#nombreLista, #randomResultado {
     color: white;
     font-family: 'Roboto-bold', sans-serif;
     font-size: 20px;
     text-align: center;
 }
+
+/* para boton reiniciar*/
+
+.div-boton-inicio p{
+    color: #F4DB00;
+    font-family: 'Roboto-bold', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    margin: 0px;
+}
+
+.img-btns-reiniciar {
+    height: 5em;
+    border-radius: 20px;
+}
+
+.btn-reiniciar:hover {
+    background-color: rgba(170, 185, 41, 0.7); /* Cambia color*/
+    border-radius: 20px;
+}
+
+
 
