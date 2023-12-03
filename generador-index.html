@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Star Wars Roulette</title>
   <link rel=stylesheet href="css/generador-estilos.css">
+  <script src="js/script-Generador.js"></script>
 </head>
 
 <body>
@@ -38,6 +39,18 @@
             <button onclick="agregarNombre()" id="agregar-btn">Agregar</button>
           </div>
         </div>
+
+        <div class="div-eliminaNombre">
+          <div>
+            <ul id="nombreLista"></ul> <!--registra visiblemente la lista en la página-->
+          </div>
+          <div>
+            <input type="text" id="nombreEliminar" placeholder="Escriba el nombre a borrar.">
+          </div>
+          <div>
+            <button onclick="eliminarNombre()" id="elimina-btn">Eliminar</button>
+          </div>
+        </div>
   
         <div class="div-nombreAleatorio">
           <div>
@@ -60,8 +73,6 @@
         </div>
  
     </section>
-    
-    <script src="js/script.js"></script>
 
   </main>
 
