@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star Wars Roulette</title>
+  <link rel=stylesheet href="css/generador-estilos.css">
+</head>
+
+<body>
+
+  <header>
+    <figure>
+      <img class="imgLogo" src="images/Star_Wars_Logo 1.png" alt="Imagen de logo" />
+    </figure>
+  </header>
+
+  <section class="section-principal">
+
+    <div class="instrucciones">
+      <p>Es hora de decidir quién serán los Elegidos.</p>
+      <p>Ingrese tus nombres a continuación.</p>
+    </div>
+
+    <!-- INGRESAR EL ANIMACION DE LOS NOMBRES: DESDE AQUÍ -->
+
+    <div>
+      <input type="text" id="nombreInput" placeholder="Ingrese un nombre">
+      <button onclick="agregarNombre()" id="agregar-btn">Agregar</button>
+      <ul id="nombreLista"></ul> <!--registra visiblemente la lista en la página-->
+      <button onclick="elegirNombreRandom()"><img src="images/play-btn.png" alt="Botón" class="img-btns"></button>
+      <p id="randomResultado"></p> <!--registra visiblemente el Elegido en la página-->
+    </div>
+
+    <!-- INGRESAR EL ANIMACION DE LOS NOMBRES: HASTA AQUÍ -->
+
+    <div class="instrucciones">
+      <p>¡Haz clic en el botón para generar tu nombre aleatorio!</p>
+      <p>Qué la fuerza te acompañe.</p>
+    </div>
+
+    <div>
+      <button class="btn-reiniciar"><img src="images/transbordador.png" alt="Botón" class="img-btns"></button>
+    </div>
+    
+  </section>
+
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,31 +1,149 @@
-body {
-    font-family: 'Arial', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
+/*Uso de regla @import para importar fuentes externas en CSS*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+/*    Grilla     */
+main {
+    height:100vh; /*que ocupe todo el espacio (horizontal-vertical)*/
+    display:grid; 
+    grid-template-areas: 
+    "header"
+    "section-principal"
+	"footer";
 }
 
-img {
-    width: 400px;
+/*         ----------          Header        -----------          */
+header {
+    grid-area: header;
+    background-color: #000000;
+	display: flex;
+  	justify-content: center;
 }
-.container {
+
+.imgLogo {
+ 	height: 128px;
+}
+
+/*           -------------         Section  - contenedor principal       -------------           */
+.section-principal {
+    grid-area: section-principal;
+    background: url('/images/bg-img.png') center/cover no-repeat; 
+	display: flex;
+  	justify-content: center;
+}
+
+.div-Principal {
+	display: grid;
+	grid-template-rows: 1fr;
+  	grid-template-columns: repeat(1, 3fr);
+    justify-content: center;
     text-align: center;
 }
 
-#nameDisplay {
-    position: absolute;
-    top: 44%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+/*            1.       div  letras             */
+.div-pLetras p {
+    color: #4BD5EE;
+    font-weight: bolder;
+	font-size: 35px;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
 }
 
-button {
-    background-color: rgb(94, 91, 91);
-    border-radius: 30px;
-    font-size: 22px;
-    padding: 10px 10px;
-    margin-top: 20px;
-    cursor: pointer;
+/*            2.       div  Boton - Animación               */
+
+.div-anima {
+	height: 400px;
+}
+
+/*.img-animacion {    SE QUITO EL BOTON
+    width: 30%;  
+}*/
+
+   /*    Animación de las letras   */
+
+.div-animacion {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 90%;
+    max-width: 1000px;
+	overflow: hidden;
+}
+
+.div-trapezoide {
+	position: relative;
+	background-color: rgba(10, 10, 10, 0.7); /* Color de fondo con transparencia */
+	transform-origin: bottom;
+	transform: perspective(20px) rotateX(1.5deg);
+}
+
+.div-animaLetras p {
+	color: #F4DB00;
+	margin: 0;
+    font-weight: bolder;
+	font-size: 20px;
+	line-height: 60px;
+	font-family: 'Roboto', sans-serif;
+	animation: animacion 6s linear infinite;
+}
+
+  @keyframes animacion {
+	from {transform: translateY(190%);}
+	to {transform: translateY(-100%);}
+  }
+
+
+/*         3.   div  Boton de inicio             */
+
+.img-Yoda {
+    width: 35%;
+}
+
+.boton-inicio {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+	padding: 10px 20px;
+	background-color: #FF6D2E;
+	text-decoration: none;
+	font-weight: bolder;
+	color: #F4DB00;
+	font-size: 30px;
+	border-radius: 20px;
+	border: 2px solid #FFA800;
+	background-color: rgba(241, 91, 21, 0.7); /* Color de fondo, transparencia */
+}
+
+.boton-inicio:hover {
+    background-color: rgba(170, 185, 41, 0.7); /* Cambia color*/
+}
+
+/*           -------------         S   -   Footer       -------------           */
+
+.footer{
+    grid-area: footer;
+    background-color: #000000;
+	display: flex;
+  	justify-content: center;
+}
+.divFooter { /*Grilla*/
+	display: grid;
+  	grid-template-rows: 1fr;
+  	grid-template-columns: repeat(1, 2fr);
+    justify-content: center;
+    text-align: center;
+}
+.imgFacebook {
+	width: 50px;
+}
+.imgInstagram {
+	width: 50px;
+}
+.imgTwitter {
+	width: 51px;
+}
+.p-div-footer{
+    color: #F4DB00;
+    font-weight: bolder;
+	font-size: 20px;
+	font-family: 'Roboto', sans-serif;
 }
