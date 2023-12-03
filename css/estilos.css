@@ -20,7 +20,11 @@ header {
 }
 
 .imgLogo {
- 	height: 128px;
+ 	height: 100px;
+}
+
+figure {
+	margin: 0px;
 }
 
 /*           -------------         Section  - contenedor principal       -------------           */
@@ -43,26 +47,18 @@ header {
 .div-pLetras p {
     color: #4BD5EE;
     font-weight: bolder;
-	font-size: 35px;
+	font-size: 20px;
 	font-family: 'Roboto', sans-serif;
 	text-align: center;
 }
 
 /*            2.       div  Boton - Animación               */
 
-.div-anima {
-	height: 400px;
-}
-
-/*.img-animacion {    SE QUITO EL BOTON
-    width: 30%;  
-}*/
-
    /*    Animación de las letras   */
 
 .div-animacion {
-	position: absolute;
-	top: 40%;
+	position: relative;
+	top: 20%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 90%;
@@ -81,15 +77,15 @@ header {
 	color: #F4DB00;
 	margin: 0;
     font-weight: bolder;
-	font-size: 20px;
-	line-height: 60px;
+	font-size: 15px;
+	line-height: 30px;
 	font-family: 'Roboto', sans-serif;
-	animation: animacion 6s linear infinite;
+	animation: animacion 4s linear infinite;
 }
 
   @keyframes animacion {
-	from {transform: translateY(190%);}
-	to {transform: translateY(-100%);}
+	from {transform: translateY(30%);}
+	to {transform: translateY(-45%);}
   }
 
 
@@ -102,12 +98,12 @@ header {
 .boton-inicio {
     font-family: 'Roboto', sans-serif;
     text-align: center;
-	padding: 10px 20px;
+	padding: 5px 10px;
 	background-color: #FF6D2E;
 	text-decoration: none;
 	font-weight: bolder;
 	color: #F4DB00;
-	font-size: 30px;
+	font-size: 15px;
 	border-radius: 20px;
 	border: 2px solid #FFA800;
 	background-color: rgba(241, 91, 21, 0.7); /* Color de fondo, transparencia */
@@ -122,7 +118,6 @@ header {
 .footer{
     grid-area: footer;
     background-color: #000000;
-	display: flex;
   	justify-content: center;
 }
 .divFooter { /*Grilla*/
@@ -133,17 +128,17 @@ header {
     text-align: center;
 }
 .imgFacebook {
-	width: 50px;
+	width: 30px;
 }
 .imgInstagram {
-	width: 50px;
+	width: 30px;
 }
 .imgTwitter {
-	width: 51px;
+	width: 30px;
 }
 .p-div-footer{
     color: #F4DB00;
     font-weight: bolder;
-	font-size: 20px;
+	font-size: 10px;
 	font-family: 'Roboto', sans-serif;
 }

@@ -3,8 +3,9 @@
 body {
     height: 100vh;
     margin: 0;
-    background: url('/images/bg-img.png') center/cover no-repeat; 
 }
+
+/*         ----------          Header        -----------          */
 
 header {
     background-color: #000000;
@@ -12,37 +13,42 @@ header {
   	justify-content: center;
 }
 
-.section-principal{
-    padding: 10%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .imgLogo {
-    height: 8em;
+    height: 100px;
 }
 
-.instrucciones {
+figure {
+	margin: 0px;
+}
+/*           -------------         Section  - contenedor principal       -------------           */
+.section-principal{
+    display: grid;
+	grid-template-rows: 1fr;
+  	grid-template-columns: repeat(1, 5fr);
+    justify-content: center;
+    text-align: center;
+    background: url('/images/bg-img.png') center/cover no-repeat; 
+}
+
+/*           instrucciones1 y 2            */
+
+.instrucciones1, .instrucciones2 {
     color: #4BD5EE;
     font-family: 'Roboto-bold', sans-serif;
-    font-size: 140%;
+    font-size: 20px;
     text-align: center;
+    margin: 0px;
 }
+
+/*             div-agregaNombre        */
 
 /* BUTONES */
-
-button{
-    background: none;
-    border: none;
-}
-
 input[type=text]{
-    padding: 5%;
-	font-size: 1em;
-	border-radius: 30px;
+    padding: 1%;
+    font-family: 'Roboto-bold', sans-serif;
+	font-size: 15px;    
 	border: 2px solid #FFA800;
-    background-color: rgba(241, 91, 21, 0.7);
+    background-color: rgba(247, 185, 156, 0.7);
 }
 
 input::placeholder{
@@ -51,21 +57,27 @@ input::placeholder{
 }
 
 #agregar-btn{
+    margin: 10px;
     font-family: 'Roboto-bold', sans-serif;
     text-align: center;
-	padding: 5%;
+	padding: 10px 15px;
 	text-decoration: none;
 	color: #F4DB00;
-	font-size: 1em;
-	border-radius: 30px;
+	font-size: 15px;
+	border-radius: 20px;
 	border: 2px solid #FFA800;
     background-color: rgba(241, 91, 21, 0.7);
 }
 
 #agregar-btn:hover{
-    background-color: rgb(186, 61, 3);
+    background-color: rgba(170, 185, 41, 0.7); /* Cambia color*/
 }
 
+/* para todos los botones*/
+button{
+    background: none;
+    border: none;
+}
 .img-btns{
     height: 5em;
 }
@@ -75,5 +87,7 @@ input::placeholder{
 #nombreLista, #randomResultado{
     color: white;
     font-family: 'Roboto-bold', sans-serif;
-    font-size: 1em;
+    font-size: 20px;
+    text-align: center;
 }
+

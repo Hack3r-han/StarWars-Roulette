@@ -1,4 +1,4 @@
-// Función para agregar un nombre a la lista
+//     *********      Función para agregar un nombre a la lista       **********
 
   function agregarNombre() { //línea 12 del HTML - la función se activa al hacer clic en el botón Agregar
     const nombreInput = document.getElementById('nombreInput'); //línea 11 del HTML
@@ -19,8 +19,9 @@
       alert('Por favor ingrese un nombre.');
     }
   }
+
   
-//Función para guardar nombres en localStorage desde nombreLista
+//    *********      Función para guardar nombres en localStorage desde nombreLista     *********      
 
   function guardarNombres() {
     const nombreLista = document.getElementById('nombreLista');  //línea 15 del HTML
@@ -35,7 +36,8 @@
     localStorage.setItem('nombresUsuarios', JSON.stringify(nombres)); //guardar el array en localStorage con el llave nombresUsuarios
   }
   
-//Función para elegir un nombre aleatorio de la lista en localStorage
+  
+//     *********      Función para elegir un nombre aleatorio de la lista en localStorage     *********      
 
   function elegirNombreRandom() {
     const nombresGuardados = localStorage.getItem('nombresUsuarios'); //recuperar elementos de localStorage
@@ -46,7 +48,8 @@
     const nombreLista = document.getElementById('nombreLista');
 
     if (!nombresGuardados) { //Comprobar si NO hay nombres guardados en localStorage
-       const predeterminedNames = ["Paolo", "Laudy", "Alba", "Hannah", "David"];
+       const predeterminedNames = ["Max","Alicia","Jose","Mercedes","Jander","Yessi","Anzu","Neimy","Hanna","Isaac","Juanjo",
+       "David","Paolo","Alba","Joaco","Laudy","Denisse","Alfredo","Marcela","Victor","Yady","Alvaro","Roxana","Elena"];
   
        localStorage.setItem('nombresUsuarios', JSON.stringify(predeterminedNames));
   
