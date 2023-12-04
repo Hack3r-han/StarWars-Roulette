@@ -1,147 +1,155 @@
 /*Uso de regla @import para importar fuentes externas en CSS*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
 /*    Grilla     */
 main {
-    height:100vh; /*que ocupe todo el espacio (horizontal-vertical)*/
-    display:grid; 
-    grid-template-areas: 
+  height: 100vh; /*que ocupe todo el espacio (horizontal-vertical)*/
+  display: grid;
+  grid-template-areas:
     "header"
     "section-principal"
-	"footer";
+    "footer";
 }
 
 /*         ----------          Header        -----------          */
 header {
-    grid-area: header;
-    background-color: #000000;
-	display: flex;
-  	justify-content: center;
+  grid-area: header;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
 }
 
 .imgLogo {
- 	height: 100px;
+  height: 100px;
 }
 
 figure {
-	margin: 0px;
+  margin: 0px;
 }
 
 /*           -------------         Section  - contenedor principal       -------------           */
 .section-principal {
-    grid-area: section-principal;
-    background: url('/images/bg-img.png') center/cover no-repeat; 
-	display: flex;
-  	justify-content: center;
+  grid-area: section-principal;
+  background: url("/images/bg-img.png") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
 }
 
 .div-Principal {
-	display: grid;
-	grid-template-rows: 1fr;
-  	grid-template-columns: repeat(1, 3fr);
-    justify-content: center;
-    text-align: center;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(1, 3fr);
+  justify-content: center;
+  text-align: center;
 }
 
 /*            1.       div  letras             */
 .div-pLetras p {
-    color: #4BD5EE;
-    font-weight: bolder;
-	font-size: 20px;
-	font-family: 'Roboto', sans-serif;
-	text-align: center;
+  color: #4bd5ee;
+  font-weight: bolder;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
 }
 
 /*            2.       div  Boton - Animación               */
 
-   /*    Animación de las letras   */
+/*    Animación de las letras   */
 
 .div-animacion {
-	position: relative;
-	top: 20%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 90%;
-    max-width: 1000px;
-	overflow: hidden;
+  position: relative;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 1000px;
+  overflow: hidden;
 }
 
 .div-trapezoide {
-	position: relative;
-	background-color: rgba(10, 10, 10, 0.7); /* Color de fondo con transparencia */
-	transform-origin: bottom;
-	transform: perspective(20px) rotateX(1.5deg);
+  position: relative;
+  background-color: rgba(
+    10,
+    10,
+    10,
+    0.7
+  ); /* Color de fondo con transparencia */
+  transform-origin: bottom;
+  transform: perspective(20px) rotateX(1.5deg);
 }
 
 .div-animaLetras p {
-	color: #F4DB00;
-	margin: 0;
-    font-weight: bolder;
-	font-size: 15px;
-	line-height: 30px;
-	font-family: 'Roboto', sans-serif;
-	animation: animacion 4s linear infinite;
+  color: #f4db00;
+  margin: 0;
+  font-weight: bolder;
+  font-size: 15px;
+  line-height: 30px;
+  font-family: "Roboto", sans-serif;
+  animation: animacion 4s linear infinite;
 }
 
-  @keyframes animacion {
-	from {transform: translateY(30%);}
-	to {transform: translateY(-45%);}
+@keyframes animacion {
+  from {
+    transform: translateY(30%);
   }
-
+  to {
+    transform: translateY(-45%);
+  }
+}
 
 /*         3.   div  Boton de inicio             */
 
 .img-Yoda {
-    width: 35%;
+  width: 35%;
 }
 
 .boton-inicio {
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-	padding: 5px 10px;
-	background-color: #FF6D2E;
-	text-decoration: none;
-	font-weight: bolder;
-	color: #F4DB00;
-	font-size: 15px;
-	border-radius: 20px;
-	border: 2px solid #FFA800;
-	background-color: rgba(241, 91, 21, 0.7); /* Color de fondo, transparencia */
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  padding: 5px 10px;
+  background-color: #ff6d2e;
+  text-decoration: none;
+  font-weight: bolder;
+  color: #f4db00;
+  font-size: 15px;
+  border-radius: 20px;
+  border: 2px solid #ffa800;
+  background-color: rgba(241, 91, 21, 0.7); /* Color de fondo, transparencia */
 }
 
 .boton-inicio:hover {
-    background-color: rgba(170, 185, 41, 0.7); /* Cambia color*/
+  background-color: rgba(170, 185, 41, 0.7); /* Cambia color*/
 }
 
 /*           -------------         S   -   Footer       -------------           */
 
-.footer{
-    grid-area: footer;
-    background-color: #000000;
-  	justify-content: center;
+.footer {
+  grid-area: footer;
+  background-color: #000000;
+  justify-content: center;
 }
-.divFooter { /*Grilla*/
-	display: grid;
-  	grid-template-rows: 1fr;
-  	grid-template-columns: repeat(1, 2fr);
-    justify-content: center;
-    text-align: center;
+.divFooter {
+  /*Grilla*/
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(1, 2fr);
+  justify-content: center;
+  text-align: center;
 }
 .imgFacebook {
-	width: 30px;
+  width: 30px;
 }
 .imgInstagram {
-	width: 30px;
+  width: 30px;
 }
 .imgTwitter {
-	width: 30px;
+  width: 30px;
 }
-.p-div-footer{
-    color: #F4DB00;
-    font-weight: bolder;
-	font-size: 10px;
-	font-family: 'Roboto', sans-serif;
+.p-div-footer {
+  color: #f4db00;
+  font-weight: bolder;
+  font-size: 10px;
+  font-family: "Roboto", sans-serif;
 }
-
 
 /*           *************            RESPONSIVO   -  PANTALLAS < 400px       ********           */
