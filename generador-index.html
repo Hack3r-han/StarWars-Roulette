@@ -56,7 +56,7 @@
           <div>
 
             <p id="randomResultado"></p> <!--registra visiblemente el Elegido en la página-->
-            
+
           </div>
           <div>
             <button onclick="elegirNombreRandom()"><img src="images/play-btn.png" alt="Botón" class="img-btns"></button>
@@ -70,6 +70,21 @@
           <p>Qué la fuerza te acompañe.</p>
         </div>
 
+        <!--                     Modal  por  boton            -->
+        <div>
+          <button onclick="mostrarNombreModal()" id="btnModal">Mostrar nombres</button>
+
+          <div id="miModal" class="modal">
+            
+            <div class="contenido-modal">
+              <span class="cerrar" id="btnCerrar2">&times;</span>
+              <ul id="listadoNombres">Listado de nombres</ul>
+            </div>
+          </div>
+
+        </div>
+        
+         <!--                     Boton de ir a inicio            -->
         <div class="div-boton-inicio">
           <a href="/index.html">
             <button class="btn-reiniciar"><img src="images/transbordador.png" alt="Botón" class="img-btns-reiniciar"></button>

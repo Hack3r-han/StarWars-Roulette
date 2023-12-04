@@ -24,7 +24,7 @@ figure {
 .section-principal{
     display: grid;
 	grid-template-rows: 1fr;
-  	grid-template-columns: repeat(1, 6fr);
+  	grid-template-columns: repeat(1, 7fr);
     justify-content: center;
     text-align: center;
     background: url('/images/bg-img.png') center/cover no-repeat; 
@@ -35,7 +35,7 @@ figure {
 .instrucciones1, .instrucciones2 {
     color: #4BD5EE;
     font-family: 'Roboto-bold', sans-serif;
-    font-size: 20px;
+    font-size: 17px;
     text-align: center;
     margin: 0px;
 }
@@ -56,7 +56,7 @@ input::placeholder{
     color: #F4DB00;
 }
 
-#agregar-btn, #elimina-btn{
+#agregar-btn, #elimina-btn, #btnModal{
     margin: 10px;
     font-family: 'Roboto-bold', sans-serif;
     text-align: center;
@@ -111,5 +111,45 @@ button{
     border-radius: 20px;
 }
 
+/*                             css del Modal                            */
 
+.modal {
+    display: none; 
+    position: fixed;
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; /*pone barras de desplazamiento automáticas (contenido más grande que contenedor)*/
+    background-color: rgba(192, 113, 113, 0.4); /* opacidad fondo*/    
+}
 
+.contenido-modal {
+    background: url('/images/bg-img.png') center/cover no-repeat; 
+    margin: auto;
+    padding: 20px;
+    border: 2px solid #F4DB00;
+    width: 80%;
+}
+
+ul {
+    font-family: 'Roboto-bold', sans-serif;
+    text-align: center;
+	color: #4BD5EE;
+	font-size: 17px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.cerrar {
+    font-family: 'Roboto-bold', sans-serif;
+    color: #F4DB00;
+    float: right;
+    font-size: 35px;
+}
+.cerrar:hover, .cerrar:focus {
+  color: rgb(201, 114, 15);
+  text-decoration: none;
+  cursor: pointer;
+}
