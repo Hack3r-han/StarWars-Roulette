@@ -18,6 +18,10 @@
   padding-top: 300px;
 } */
 
+body {
+  font-family: "Lilita One", sans-serif;
+}
+
 .warior {
   width: 60px;
   height: 60px;
@@ -67,8 +71,14 @@ h5 {
   }
 }
 .choice {
-  width: 150px;
-
-  background-image: none;
-  background-color: blue;
+  width: 15%;
+  height: 15%;
+  border-radius: 50%;
+  color: rgb(208, 30, 30);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: rgb(136, 255, 0);
+  text-align: center;
+  padding-top: 8%;
 }
