@@ -23,8 +23,8 @@ figure {
 /*           -------------         Section  - contenedor principal       -------------           */
 .section-principal{
     display: grid;
-	grid-template-rows: 1fr;
-  	grid-template-columns: repeat(1, 6fr);
+	/* grid-template-rows: 1fr;
+  	grid-template-columns: repeat(1, 6fr); */ 
     justify-content: center;
     text-align: center;
     background: url('/images/bg-img.png') center/cover no-repeat; 
@@ -42,13 +42,12 @@ figure {
 
 /*             div-agregaNombre        */
 
-/* BUTONES */
 input[type=text]{
     padding: 10px;
     font-family: 'Roboto-bold', sans-serif;
 	font-size: 15px;    
 	border: 2px solid #FFA800;
-    border-radius: 20px;
+    border-radius: 10px;
     background-color: rgba(247, 185, 156, 0.7);
 }
 
@@ -74,13 +73,10 @@ input::placeholder{
     background-color: rgba(170, 185, 41, 0.7); /* Cambia color*/
 }
 
-/* para todos los botones*/
+/* BOTONES - ESTILOS GENERALES*/
 button{
     background: none;
     border: none;
-}
-.img-btns{
-    height: 5em;
 }
 
 /* TEXTO DE LISTA */
@@ -92,7 +88,20 @@ button{
     text-align: center;
 }
 
-/* para boton reiniciar*/
+/* BOTON DE PLAY */
+
+.img-btn-play{
+    height: 5em;
+    transition: all 0.5s ease;
+    transform: scale(1);
+}
+
+.img-btn-play:hover {
+    transform: scale(1.2) perspective(1px)
+}
+
+
+/* BOTON DE REINICIAR */
 
 .div-boton-inicio p{
     color: #F4DB00;
@@ -102,12 +111,12 @@ button{
     margin: 0px;
 }
 
-.img-btns-reiniciar {
+.img-btn-reiniciar {
     height: 5em;
-    border-radius: 20px;
+    transition: all 0.5s ease;
+    transform: scale(1);
 }
 
-.btn-reiniciar:hover {
-    background-color: rgba(170, 185, 41, 0.7); /* Cambia color*/
-    border-radius: 20px;
+.img-btn-reiniciar:hover {
+    transform: scale(1.2) perspective(1px)
 }
