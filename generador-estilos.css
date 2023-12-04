@@ -16,10 +16,11 @@ header {
 }
 
 .section-principal{
-    padding: 10%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+	grid-template-rows: 1fr;
+  	grid-template-columns: repeat(1, 6fr);
+    justify-content: center;
+    text-align: center;
 }
 
 .imgLogo {
@@ -41,7 +42,7 @@ button{
 }
 
 input[type=text]{
-    padding: 5%;
+    padding: 1%;
 	font-size: 1em;
 	border-radius: 30px;
 	border: 2px solid #FFA800;
@@ -56,8 +57,7 @@ input::placeholder{
 #agregar-btn{
     font-family: 'Roboto-bold', sans-serif;
     text-align: center;
-	padding: 5%;
-	text-decoration: none;
+	padding: 1%;
 	color: #F4DB00;
 	font-size: 1em;
 	border-radius: 30px;
