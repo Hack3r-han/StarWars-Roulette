@@ -1,0 +1,40 @@
+main {
+  height: 100vh; /*que ocupe todo el espacio (horizontal-vertical)*/
+  display: grid;
+  grid-template-areas:
+    "header"
+    "section-principal"
+    "footer";
+}
+
+/*         ----------          Header        -----------          */
+header {
+  grid-area: header;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+}
+
+.imgLogo {
+  height: 100px;
+}
+
+figure {
+  margin: 0px;
+}
+
+/*           -------------         Section  - contenedor principal       -------------           */
+.section-principal {
+  grid-area: section-principal;
+  background: url("/images/bg-img.png") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+}
+
+.div-Principal {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(1, 3fr);
+  justify-content: center;
+  text-align: center;
+}

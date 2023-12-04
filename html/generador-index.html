@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Star Wars Roulette</title>
+    <link rel="stylesheet" href="../css/generador-estilos.css" />
+    <script src="../js/script-generador.js"></script>
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <figure>
+          <img
+            class="imgLogo"
+            src="../images/Star_Wars_Logo 1.png"
+            alt="Imagen de logo"
+          />
+        </figure>
+      </header>
+
+      <section class="section-principal">
+        <div class="instrucciones1">
+          <p>Es hora de decidir quienes serán los Elegidos.</p>
+          <p>Ingresa los nombres a continuación.</p>
+        </div>
+
+        <!-- INGRESAR EL ANIMACION DE LOS NOMBRES: DESDE AQUÍ -->
+
+        <div class="div-agregaNombre">
+          <div>
+            <ul id="nombreLista"></ul>
+            <!--registra visiblemente la lista en la página-->
+          </div>
+          <div>
+            <input
+              type="text"
+              id="nombreInput"
+              placeholder="Escriba un nombre"
+            />
+          </div>
+          <div>
+            <button onclick="agregarNombre()" id="agregar-btn">Agregar</button>
+          </div>
+        </div>
+
+        <div class="div-eliminaNombre">
+          <div>
+            <ul id="nombreLista"></ul>
+            <!--registra visiblemente la lista en la página-->
+          </div>
+          <div>
+            <input
+              type="text"
+              id="nombreEliminar"
+              placeholder="Escriba el nombre"
+            />
+          </div>
+          <div>
+            <button onclick="eliminarNombre()" id="elimina-btn">
+              Eliminar
+            </button>
+          </div>
+        </div>
+
+        <div class="div-nombreAleatorio">
+          <div>
+            <p id="randomResultado"></p>
+            <!--registra visiblemente el Elegido en la página-->
+          </div>
+          <div>
+            <button onclick="elegirNombreRandom()">
+              <img src="images/play-btn.png" alt="Botón" class="img-btns" />
+            </button>
+          </div>
+        </div>
+
+        <!-- INGRESAR EL ANIMACION DE LOS NOMBRES: HASTA AQUÍ -->
+
+        <div class="instrucciones2">
+          <p>¡Haz clic en el botón para generar nombre aleatorio!</p>
+          <p>Qué la fuerza te acompañe.</p>
+        </div>
+
+        <div class="div-boton-inicio">
+          <a href="/index.html">
+            <button class="btn-reiniciar">
+              <img
+                src="images/transbordador.png"
+                alt="Botón"
+                class="img-btns-reiniciar"
+              />
+            </button>
+          </a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
