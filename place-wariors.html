@@ -1,161 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PLaceWariors</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap"
+      rel="stylesheet"
+    />
     <style>
-       .warior {
-            width: 70px;
-            height: 70px;
-            background-color: rgb(255, 119, 0);
-            background-image: radial-gradient(rgb(255, 111, 0),rgb(255, 234, 0));
-            padding-top: 10px;
-            opacity: .8;
-            margin-left: 100px;
-            margin-top: 100px;
-        }
-        
-        h5 {
-            text-align: center;
-            padding-top: .1em;
-           
-            
-        }
+      /* .warior {
+        width: 60px;
+        height: 60px;
+        background-color: rgb(255, 119, 0);
+        background-image: radial-gradient(rgb(255, 111, 0), rgb(255, 234, 0));
+        padding-top: 10px;
+        opacity: 0.8;
+        margin-left: 100px;
+        margin-top: 100px;
+      }
 
-        .pulse {
-            animation: pulse-animation .8s infinite;
-        }
+      h5 {
+        text-align: center;
+        padding-top: -20%;
+      }
 
-        @keyframes pulse-animation {
+      .pulse {
+        animation: pulse-animation 0.8s infinite;
+      }
+
+      @keyframes pulse-animation {
         0% {
-            box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
         }
         100% {
-            box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+          box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
         }
+      }
+      .spin {
+        animation: spin 5s linear infinite;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
         }
-        .spin {
-            animation: spin 5s linear infinite;
+        30% {
+          transform: rotate(10deg);
         }
-        @keyframes spin {
-        0% { transform: rotate(0deg); }
-        30% { transform: rotate(10deg); }
-        60% { transform: rotate(0deg); }
-        100% { transform: rotate(10deg); }
+        60% {
+          transform: rotate(0deg);
         }
-        .choice {
-            width: 150px;
-           background-image: none;
-           background-color: blue;
+        100% {
+          transform: rotate(10deg);
         }
+      }
+      .choice {
+        width: 150px;
 
-
+        background-image: none;
+        background-color: blue;
+      } */
     </style>
-
-
-</head>
-<body>
-    <div class="container">
-    </div>
-    
+  </head>
+  <body>
+    <div class="container"></div>
 
     <script>
+      const wariors = [
+        "David",
+        "Laudy",
+        "Hannah",
+        "Paolo",
+        "Alba",
+        "Roxana",
+        "Alvaro",
+        "Alfredo",
+        "Maxuel",
+        "Anzuly",
+        "Neymi",
+        "Jose",
+        "Juaco",
+        "Isaac",
+        "Yessenia",
+        "Alicia",
+        "Victor",
+        "Viviana",
+        "Raul",
+        "Jander",
+        "Denisse",
+        "Marcela",
+        "Elena",
+      ];
 
+      function chooseWarior() {
+        let index = Math.floor(Math.random() * wariors.length);
+        nameWarior = wariors[index];
+        return nameWarior;
+      }
 
-         const wariors = ["David","Laudy","Hannah", "Paolo", "Alba","Roxana","Alvaro","Alfredo","Maxuel","Anzuly","Neymi","Jose", "Juaco","Isaac", "Yessenia", "Alicia","Victor", "Viviana","Raul","Jander","Denisse","Marcela","Elena" ];
+      function placeWariors() {
+        const container = document.querySelector(".container");
+        for (let i = 0; i < wariors.length; i++) {
+          const warior = document.createElement("div");
+          warior.className = "warior pulse ";
+          warior.innerHTML = `<h5>${chooseWarior()}</h5>`;
+          container.appendChild(warior);
 
-         function chooseWarior(){
-            let index = Math.floor(Math.random()* wariors.length);
-            nameWarior = wariors[index]
-            return nameWarior;
+          const randomX = Math.floor(Math.random() * (window.innerWidth * 0.9));
+          const randomY = Math.floor(
+            Math.random() * (window.innerHeight * 0.9)
+          );
+
+          console.log(randomY);
+
+          warior.style.position = "absolute";
+          warior.style.left = `${randomX}px`;
+          warior.style.top = `${randomY}px`;
+          warior.style.borderRadius = "50%";
+          // warior.style.backgroundColor = "yellow"
         }
+      }
 
-        function placeWariors(){
-            const container = document.querySelector(".container");
-            for(let i = 0; i < wariors.length; i++){
-                const warior = document.createElement("div");
-                warior.className = "warior pulse ";
-                warior.innerHTML = `<h5>${chooseWarior()}</h5>`
-                container.appendChild(warior)
+      placeWariors();
 
-                const randomX = Math.floor(Math.random() * (window.innerWidth* .9));
-                const randomY = Math.floor(Math.random() * (window.innerHeight* .9));
+      function playRoulette() {
+        let choice = chooseWarior();
+        let h1 = document.createElement("h1");
+        const container = document.querySelector(".container");
+        h1.textContent = choice;
+        container.appendChild(h1);
+        h1.className = "choice";
+      }
 
-                console.log(randomY)
+      playRoulette();
 
-                warior.style.position = "absolute";
-                warior.style.left = `${randomX}px`;
-                warior.style.top = `${randomY}px`;
-                warior.style.borderRadius = "50%"
-                // warior.style.backgroundColor = "yellow"
-            }
-        }
+      // let randomNumber = Math.floor(Math.random()* 500)
+      // let positionTop  = `${randomNumber}px`
+      // let positionLeft = `${randomNumber}px`
+      // box01 = document.querySelector("#box01");
+      // box01.style.position = "absolute";
+      // box01.style.top = positionTop;
+      // box01.style.left = positionLeft;
+      // box01.style["border-radius"] = "50%";
 
-        placeWariors()
+      //const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
-        function playRoulette(){
-            let choice = chooseWarior();
-            let h1 = document.createElement("h1")
-            const container = document.querySelector(".container");
-            h1.textContent = choice
-            container.appendChild(h1)
-            h1.className = "choice";
-        }
+      // function createDivs() {
+      // const container = document.querySelector('.container');
 
-        playRoulette()
+      // for (let i = 0; i < 10; i++) { // Creating 10 divs for example
+      //     const div = document.createElement('div');
+      //     div.className = 'random-div';
+      //     container.appendChild(div);
 
+      //     // Generate random X and Y coordinates
+      //     const randomX = Math.floor(Math.random() * window.innerWidth);
+      //     const randomY = Math.floor(Math.random() * window.innerHeight);
 
+      //     // Set position for the div
+      //     div.style.position = 'absolute';
+      //     div.style.left = `${randomX}px`;
+      //     div.style.top = `${randomY}px`;
 
+      // Optionally, you can add content or styles to the divs
+      // div.textContent = `Div ${i+1}`;
+      // div.style.backgroundColor = 'lightblue';
+      // div.style.padding = '10px';
+      // div.style.border = '1px solid black';
 
-
-
-
-        
-       
-        // let randomNumber = Math.floor(Math.random()* 500)
-        // let positionTop  = `${randomNumber}px`
-        // let positionLeft = `${randomNumber}px`
-        // box01 = document.querySelector("#box01");
-        // box01.style.position = "absolute";
-        // box01.style.top = positionTop;
-        // box01.style.left = positionLeft;
-        // box01.style["border-radius"] = "50%";
-
-       
-
-
-        //const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
-
-        // function createDivs() {
-        // const container = document.querySelector('.container');
-        
-        // for (let i = 0; i < 10; i++) { // Creating 10 divs for example
-        //     const div = document.createElement('div');
-        //     div.className = 'random-div';
-        //     container.appendChild(div);
-            
-        //     // Generate random X and Y coordinates
-        //     const randomX = Math.floor(Math.random() * window.innerWidth);
-        //     const randomY = Math.floor(Math.random() * window.innerHeight);
-            
-        //     // Set position for the div
-        //     div.style.position = 'absolute';
-        //     div.style.left = `${randomX}px`;
-        //     div.style.top = `${randomY}px`;
-            
-            // Optionally, you can add content or styles to the divs
-            // div.textContent = `Div ${i+1}`;
-            // div.style.backgroundColor = 'lightblue';
-            // div.style.padding = '10px';
-            // div.style.border = '1px solid black';
-      
-       
-
-// Call the function to create divs when the window loads
-// window.onload = createDivs;
-
-       
+      // Call the function to create divs when the window loads
+      // window.onload = createDivs;
     </script>
-</body>
+  </body>
 </html>
