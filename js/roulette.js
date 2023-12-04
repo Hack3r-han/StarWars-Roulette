@@ -49,7 +49,6 @@ const wariors = [
       warior.style.left = `${randomX}px`;
       warior.style.top = `${randomY}px`;
       warior.style.borderRadius = "50%";
-      // warior.style.backgroundColor = "yellow"
     }
   }
 
@@ -62,11 +61,10 @@ const wariors = [
     h1.textContent = choice;
     container.appendChild(h1);
     h1.className = "choice";
-    p.style.display = "none"
   }
   
 
   playRoulette();
 
-  //window.onload = createDivs;
+  window.onload = placeWariors;
 

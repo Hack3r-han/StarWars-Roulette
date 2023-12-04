@@ -5,8 +5,6 @@ body {
   font-family: "Lilita One", sans-serif;
   height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 #blackbar {
@@ -19,12 +17,14 @@ body {
 
 .imgLogo {
   height: 100px;
-  position: fixed;
+  margin: 0 auto;
+  display: block;
 }
 
 .container {
   background: url("../images/bg-img.png") center/cover no-repeat;
-  height: 90vh;
+  height: 100vh;
+  width: 100vw;
 }
 
 .warior {
@@ -83,8 +83,11 @@ body {
   height: 15%;
   border-radius: 50%;
   color: rgb(208, 30, 30);
-  position: fixed;
+  position: absolute;
+  top: 40%;
+  left: 45%;
   background-color: rgb(54, 13, 28);
+
   text-align: center;
   padding-top: 8%;
   opacity: 0.9;
