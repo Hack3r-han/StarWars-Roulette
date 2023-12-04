@@ -1,11 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tragaperras</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.cdnfonts.com/css/star-wars" rel="stylesheet">
 </head>
 <body>
+
+    <div class="container">
+        <div class="slot-machine">
+            <div class="reel" id="reel">
+                <div class="symbol" id="symbol1"></div>
+                <div class="symbol" id="symbol2"></div>
+                <div class="symbol" id="symbol3"></div>
+                <p id="result" class="result"></p>
+            </div>
+            <button class="spin-btn" onclick="girarTragaperras()">Girar</button>
+            <button class="reset-btn" onclick="resetTragaperras()">Reset</button>
+        </div>
+
+        <div class="options">
+            <h2>Lista de Participantes</h2>
+            <ul id="lista-participantes">
+                <!-- La lista de participantes se mostrará aquí -->
+            </ul>
+
+            <h2>Modificar Lista</h2>
+            <label for="nuevoNombre">Nuevo Nombre:</label>
+            <input type="text" id="nuevoNombre">
+            <button onclick="agregarNombre()">Agregar Nombre</button>
+
+            <label for="eliminarNombre">Eliminar Nombre:</label>
+            <select id="eliminarNombre">
+                <!-- Opciones se generarán dinámicamente con JavaScript -->
+            </select>
+            <button onclick="eliminarNombre()">Eliminar Nombre</button>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <p id="modal-message"></p>
+        </div>
+    </div>
+
+    <audio id="resetSound" src="/sounds/pistol.mp3"></audio>
+    <audio id="deleteSound" src="sounds/chewbaca.mp3"></audio>
+    <audio id="spinSound" src="/sounds/r2d2.mp3"></audio>
+    <audio id="spinSound" src="/sounds/yesmaster.mp3"></audio>
+
     
+    <script src="script.js"></script>
 </body>
 </html>
