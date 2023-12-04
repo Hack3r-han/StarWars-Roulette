@@ -1,90 +1,89 @@
-//       *********      Array de base         *********
+// ********* Array de base *********
+let nombresArray = ["Maxwell", "Alicia", "Jose", "Mercedes", "Jander", "Yessi", "Anzuly", "Neimy", "Hanna",
+  "Isaac", "Juanjo", "David", "Paolo", "Alba", "Joaco", "Alberto", "Denisse", "Alfredo", "Marcela", "Laudy",
+  "Victor", "Yady", "Alvaro", "Roxana", "Elena",
+];
 
-let nombresArray = ["Maxwell","Alicia","Jose","Mercedes","Jander","Yessi","Anzuly","Neimy","Hanna",
-  "Isaac","Juanjo","David","Paolo","Alba","Joaco","Alberto","Denisse","Alfredo","Marcela","Laudy",
-  "Victor","Yady","Alvaro","Roxana","Elena",];
-
-//     *********      Función para elegir nombre  aleatorio    **********
-
+// ********* Función para elegir nombre aleatorio **********
 function elegirNombreRandom() {
-  let resultado = document.getElementById("randomResultado"); // Obtiene el elemento del documento con id de etiqueta p
-  let nombreAleatorio = obtenerNombreAleatorio(nombresArray); // Llama función obtenerNombreAleatorio y guarda nombre aleatorio
-  resultado.textContent = nombreAleatorio; // Asigna  nombre aleatorio como texto del elemento con id randomResultado.
+  let resultado = document.getElementById("randomResultado");
+  let nombreAleatorio = obtenerNombreAleatorio(nombresArray);
+  resultado.textContent = nombreAleatorio;
 }
 
-//     *********      Función que toma array como argumento y devuelve elemento aleatorio   **********
-
+// ********* Función que toma array como argumento y devuelve elemento aleatorio **********
 function obtenerNombreAleatorio(array) {
-  let indiceAleatorio = Math.floor(Math.random() * array.length); // Genera un indice aleatorio dentro del rango del array
-  return array[indiceAleatorio]; // Devuelve el elemento del array (que esta en el indice aleatorio)
+  let indiceAleatorio = Math.floor(Math.random() * array.length);
+  return array[indiceAleatorio];
 }
 
-//              *********             Función para el modal          **********  
-
-window.onload = function () {  //se da el evento cuando la ventana se ha cargado
+// ********* Función para el modal **********
+window.onload = function () {
   let modal = document.getElementById("miModal");
   const btnCerrar = document.getElementsByClassName("cerrar")[0];
 
-  btnCerrar.onclick = function () { //permite cerrar el modal
+  btnCerrar.onclick = function () {
     modal = document.getElementById("miModal");
     modal.style.display = "none";
   };
 
-  window.onclick = function (event) { //maneja el evento clic en la ventana
-    if (event.target == modal) { // si el objetivo del evento  clic es el modal, haga:
-      modal.style.display = "none"; //ocultar modal
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
     }
   };
 };
 
-//     *********      Función para mostrar el listado completo de nombresArray     **********
+// ********* Función para mostrar el listado completo de nombresArray **********
 function mostrarNombreModal() {
   let modal = document.getElementById("miModal");
-  modal.style.display = "block"; //
-  let listadoNombres = document.getElementById("listadoNombres"); //  Ul (parametro id de ul)
+  modal.style.display = "block";
+  let listadoNombres = document.getElementById("listadoNombres");
 
-  listadoNombres.innerHTML = ""; // Limpia listado actual
+  listadoNombres.innerHTML = "";
 
-  // Agrega cada nombre al listado
   nombresArray.forEach((name) => {
-    let listItem = document.createElement("li"); //(parametro: li)
+    let listItem = document.createElement("li");
     listItem.textContent = name;
-    listadoNombres.appendChild(listItem); //agrega los li a ul
+    listadoNombres.appendChild(listItem);
   });
 }
 
-//     *********      Función para agregar un elemento al array    **********
-
+// ********* Función para agregar un elemento al array **********
 function agregarNombre() {
-  let addElementInput = document.getElementById("nombreInput"); //recibe como parametro id del input
-  let newName = addElementInput.value.trim(); //Quitas espacios, adelante y atras
+  let addElementInput = document.getElementById("nombreInput");
+  let newName = addElementInput.value.trim();
 
   if (newName !== "") {
-    //si es diferente de vacio
-    nombresArray.push(newName); //agrega el elemento escrito array
-    addElementInput.value = ""; // Limpiar el input después de agregar
-    // mostrarNombreModal(); //llama la funcion
+    nombresArray.push(newName);
+    addElementInput.value = "";
+    mostrarNombreModal();
   }
 }
 
-//     *********      Función para eliminar un elemento del array    **********
-
+// ********* Función para eliminar un elemento del array **********
 function eliminarNombre() {
-  let removeElementInput = document.getElementById("nombreEliminar"); //parametro: id del input
-  let nameToRemove = removeElementInput.value.trim(); //Quitas espacios, adelante y atras
+  let removeElementInput = document.getElementById("nombreEliminar");
+  let nameToRemove = removeElementInput.value.trim();
 
   if (nameToRemove !== "") {
-    // si es diferente de vacio
-    let index = nombresArray.indexOf(nameToRemove); // devuelve la posicion de elemento
+    let index = nombresArray.indexOf(nameToRemove);
 
     if (index !== -1) {
-      //si es diferente de -1, encontro el elemento escrito
-      nombresArray.splice(index, 1); // borra 1 elemento de esa posicion o index
-      removeElementInput.value = ""; // Limpiar el input después de eliminar
-      // mostrarNombreModal();//vuelve a pintar el listado
+      nombresArray.splice(index, 1);
+      removeElementInput.value = "";
+      mostrarNombreModal();
     } else {
-      // sino encontro el elemento
       alert("El nombre no existe en el listado");
     }
   }
 }
+
+// ********* Nueva función para reiniciar con sonido asociada al clic del botón img-btn-reiniciar *********
+document.querySelector('.img-btn-reiniciar').addEventListener('click', function() {
+  // Resto del código para reiniciar...
+
+  // Reproducir el sonido al reiniciar
+  let sound = document.getElementById("sound");
+  sound.play();
+});
