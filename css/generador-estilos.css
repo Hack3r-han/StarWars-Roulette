@@ -44,10 +44,11 @@ figure {
 
 /* BUTONES */
 input[type=text]{
-    padding: 1%;
+    padding: 10px;
     font-family: 'Roboto-bold', sans-serif;
 	font-size: 15px;    
 	border: 2px solid #FFA800;
+    border-radius: 20px;
     background-color: rgba(247, 185, 156, 0.7);
 }
 
@@ -60,7 +61,7 @@ input::placeholder{
     margin: 10px;
     font-family: 'Roboto-bold', sans-serif;
     text-align: center;
-	padding: 10px 15px;
+	padding: 10px;
 	text-decoration: none;
 	color: #F4DB00;
 	font-size: 15px;
