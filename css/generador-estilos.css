@@ -4,6 +4,7 @@ body {
   height: 100vh;
   margin: 0;
   background: url("/images/bg-img.png") center/cover no-repeat;
+  font-family: "Roboto-bold", sans-serif;
 }
 
 header {
@@ -31,7 +32,7 @@ figure {
 .instrucciones1,
 .instrucciones2 {
   color: #4bd5ee;
-  font-family: "Roboto-bold", sans-serif;
+
   font-size: 17px;
   text-align: center;
   margin: 0px;
@@ -39,7 +40,6 @@ figure {
 
 input[type="text"] {
   padding: 10px;
-  font-family: "Roboto-bold", sans-serif;
   font-size: 15px;
   border: 2px solid #ffa800;
   border-radius: 10px;
@@ -47,7 +47,6 @@ input[type="text"] {
 }
 
 input::placeholder {
-  font-family: "Roboto-bold", sans-serif;
   color: #f4db00;
 }
 
@@ -55,7 +54,6 @@ input::placeholder {
 #elimina-btn,
 #btnModal {
   margin: 10px;
-  font-family: "Roboto-bold", sans-serif;
   text-align: center;
   padding: 10px;
   text-decoration: none;
@@ -79,7 +77,6 @@ button {
 #nombreLista,
 #randomResultado {
   color: white;
-  font-family: "Roboto-bold", sans-serif;
   font-size: 20px;
   text-align: center;
 }
@@ -96,7 +93,6 @@ button {
 
 .div-boton-inicio p {
   color: #f4db00;
-  font-family: "Roboto-bold", sans-serif;
   font-size: 15px;
   text-align: center;
   margin: 0px;
@@ -194,10 +190,6 @@ ul {
   height: 350px;
   padding-top: 300px;
 } */
-
-body {
-  font-family: "Lilita One", sans-serif;
-}
 
 .warior {
   width: 60px;
