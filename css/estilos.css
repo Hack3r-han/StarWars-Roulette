@@ -3,7 +3,6 @@
 
 /* Grilla */
 main {
-  height: 100vh;
   display: grid;
   grid-template-areas: "header" "section-principal" "footer";
 }
@@ -50,8 +49,8 @@ figure {
 /* 1. div letras */
 .div-pLetras p {
   color: #4bd5ee;
-  font-weight: bolder;
-  font-size: 20px;
+  font-size: 24px;
+  font-weight: 900;
   font-family: "Roboto", sans-serif;
   text-align: center;
 }
