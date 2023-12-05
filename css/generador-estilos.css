@@ -211,7 +211,7 @@ h5 {
   color: #4bd5ee;
   position: fixed;
   top: 30%;
-  left: 42%;
+  left: 50%;
   background-color: rgb(10, 4, 58);
   text-align: center;
   padding-top: 8%;
@@ -247,6 +247,7 @@ button:active + embed {
 .buttonContainer {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   text-align: center;
   justify-content: center;
   gap: 2rem;
