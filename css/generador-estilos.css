@@ -5,7 +5,7 @@ body {
   margin: 0;
   background: url("../images/bg-img.png") center/cover no-repeat;
   font-family: "Roboto-bold", sans-serif;
-  height: 140vh;
+  height: 100vh;
 }
 
 header {
@@ -156,13 +156,11 @@ button {
   opacity: 0.8;
   margin-left: 100px;
   margin-top: 100px;
-  font-family: "Lilita One", sans-serif;
 }
 
 h5 {
   text-align: center;
   padding-top: -20%;
-  font-family: "Lilita One", sans-serif;
   color: yellow;
 }
 
@@ -196,10 +194,10 @@ h5 {
   }
 }
 .choice {
-  width: 15%;
-  height: 15%;
+  width: 8%;
+  height: 8%;
   border-radius: 50%;
-  color: rgb(208, 30, 30);
+  color: rgb(97, 9, 9);
   position: fixed;
   top: 50%;
   left: 50%;

@@ -2,6 +2,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
 /* Grilla */
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
 main {
   display: grid;
   grid-template-areas: "header" "section-principal" "footer";
@@ -51,8 +58,8 @@ figure {
   color: #4bd5ee;
   font-size: 24px;
   font-weight: 900;
-  font-family: "Roboto", sans-serif;
   text-align: center;
+  margin-top: 2rem;
 }
 
 /* 2. div Boton - Animación */
@@ -60,12 +67,12 @@ figure {
 /* Animación de las letras */
 .div-anima {
   position: relative;
-  top: 25%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
   max-width: 900px;
-  height: 200px;
+  height: 400px;
   overflow: hidden;
 }
 
@@ -74,17 +81,17 @@ figure {
   background-color: rgba(121, 21, 21, 0.4);
   /* Color de fondo con transparencia */
   transform-origin: bottom;
-  transform: perspective(25px) rotateX(3deg);
+  transform: perspective(30px) rotateX(3deg);
+  overflow: hidden;
 }
 
 .div-animaLetras p {
   color: #f4db00;
   margin: 0;
   font-weight: bolder;
-  font-size: 20px;
-  line-height: 25px;
-  font-family: "Roboto", sans-serif;
-  animation: animacion 6s linear infinite;
+  font-size: 28px;
+  line-height: 36px;
+  animation: animacion 12s linear infinite;
 }
 
 @keyframes animacion {
@@ -102,7 +109,6 @@ figure {
 }
 
 .boton-inicio {
-  font-family: "Roboto", sans-serif;
   text-align: center;
   padding: 5px 10px;
   background-color: #ff6d2e;
@@ -110,7 +116,7 @@ figure {
   font-weight: bolder;
   color: #f4db00;
   font-size: 14px;
-  border-radius: 20px;
+  border-radius: 10px;
   border: 2px solid #ffa800;
   background-color: rgba(241, 91, 21, 0.7);
   margin-bottom: 3rem;
