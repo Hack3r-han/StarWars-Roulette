@@ -14,7 +14,7 @@
         <figure>
           <img
             class="imgLogo"
-            src="images/Star_Wars_Logo 1.png"
+            src="../images/Star_Wars_Logo 1.png"
             alt="Imagen de logo"
           />
         </figure>
@@ -90,7 +90,10 @@
         <div id="miModal" class="modal">
           <div class="contenido-modal">
             <span class="cerrar" id="btnCerrar2">&times;</span>
-            <button style="color: red" onclick="playRoulette()">click</button>
+            <button style="color: red" class="sound" onclick="playRoulette()">
+              click
+            </button>
+            <embed src="../sounds/chewbaca.mp3" />
           </div>
         </div>
 
@@ -99,19 +102,21 @@
           <button
             onclick="reproducirSonidoPistolDesdeBoton(); redireccionarInicio();"
           >
-            <img
-              src="../images/return-btn.png"
-              alt="Botón"
-              class="img-btn-reiniciar"
-            />
+            <a href="../html/index.html">
+              <img
+                src="../images/return-btn.png"
+                alt="Botón"
+                class="img-btn-reiniciar"
+              />
+            </a>
           </button>
         </div>
 
         <!-- Audio para el sonido -->
-        <audio id="audioPistol" src="/sounds/pistol.mp3"></audio>
-        <audio id="audioYesMaster" src="/sounds/yesmaster.mp3"></audio>
-        <audio id="audioChewbaca" src="sounds/chewbaca.mp3"></audio>
-        <audio id="audioR2D2" src="sounds/r2d2.mp3"></audio>
+        <audio id="audioPistol" src="../sounds/pistol.mp3"></audio>
+        <audio id="audioYesMaster" src="../sounds/yesmaster.mp3"></audio>
+        <audio id="audioChewbaca" src="../sounds/chewbaca.mp3"></audio>
+        <audio id="audioR2D2" src="../sounds/r2d2.mp3"></audio>
       </section>
     </main>
   </body>

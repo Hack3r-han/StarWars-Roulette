@@ -1,6 +1,6 @@
 // ********* Array de base *********
-let nombresArray = ["Maxwell", "Alicia", "Jose", "Mercedes", "Jander", "Yessi", "Anzuly", "Neimy", "Hanna",
-  // "Isaac", "Juanjo", "David", "Paolo", "Alba", "Joaco", "Alberto", "Denisse", "Alfredo", "Marcela", "Laudy",
+let nombresArray = ["Maxwell", "Alicia", "Jose", "Jander", "Yessi", "Anzuly", "Neimy", "Hanna",
+  // "Isaac", "David", "Paolo", "Alba", "Joaco", "Denisse", "Alfredo", "Marcela", "Laudy",
   // "Victor", "Yady", "Alvaro", "Roxana", "Elena",
 ];
 
@@ -176,8 +176,8 @@ function placeName() {
     container.appendChild(warior);
     container.appendChild
 
-    const randomX = Math.floor(Math.random() * window.innerWidth);
-    const randomY = Math.floor(Math.random() * window.innerHeight);
+    const randomX = Math.floor(Math.random() * (window.innerWidth * .5));
+    const randomY = Math.floor(Math.random() * (window.innerHeight * .5)) ;
 
     console.log(randomY);
 
@@ -200,7 +200,10 @@ function playRoulette() {
   h1.className = "choice";
 }
 
-let contenido = document.querySelector(".contenido-modal")
-contenido.textContent = "HELP"
-
 playRoulette();
+
+const audio = new Audio("../sounds/keyboard.mp3");
+
+const buttonSound = document.querySelector(".sound")
+buttonSound.addEventListener("click", () => { audio.play();
+  });
