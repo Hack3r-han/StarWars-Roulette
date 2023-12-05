@@ -39,15 +39,15 @@ window.onload = function () {
 function mostrarNombreModal() {
   let modal = document.getElementById("miModal");
   modal.style.display = "block";
-  let listadoNombres = document.getElementById("listadoNombres");
+  // let listadoNombres = document.getElementById("listadoNombres");
 
-  listadoNombres.innerHTML = "";
+  /* listadoNombres.innerHTML = "";
 
   nombresArray.forEach((name) => {
     let listItem = document.createElement("li");
     listItem.textContent = name;
     listadoNombres.appendChild(listItem);
-  });
+  }); */
 }
 
 // ********* Función para agregar un elemento al array **********
@@ -128,3 +128,75 @@ document.getElementById('starWarsTheme').addEventListener('ended', function() {
   this.currentTime = 0; // Reinicia el tiempo de reproducción
   this.pause(); // Pausa la reproducción
 });
+
+/* Modal */
+
+const wariors = [
+  "David",
+  "Laudy",
+  "Hannah",
+  "Paolo",
+  "Alba",
+  "Roxana",
+  "Alvaro",
+  // "Alfredo",
+  // "Maxuel",
+  // "Anzuly",
+  // "Neymi",
+  // "Jose",
+  // "Juaco",
+  // "Isaac",
+  // "Yessenia",
+  // "Alicia",
+  // "Victor",
+  // "Viviana",
+  // "Raul",
+  // "Jander",
+  // "Denisse",
+  // "Marcela",
+  // "Elena",
+];
+
+function chooseWarior() {
+  let index = Math.floor(Math.random() * wariors.length);
+  nameWarior = wariors[index];
+  return nameWarior;
+}
+
+function placeWariors() {
+  const container = document.querySelector(".container");
+  for (let i = 0; i < wariors.length; i++) {
+    const warior = document.createElement("div");
+    warior.className = "warior pulse ";
+    warior.innerHTML = `<h5>${chooseWarior()}</h5>`;
+    container.appendChild(warior);
+
+    const randomX = Math.floor(Math.random() * (window.innerWidth * 0.9));
+    const randomY = Math.floor(
+      Math.random() * (window.innerHeight * 0.9)
+    );
+
+    console.log(randomY);
+
+    warior.style.position = "absolute";
+    warior.style.left = `${randomX}px`;
+    warior.style.top = `${randomY}px`;
+    warior.style.borderRadius = "50%";
+    // warior.style.backgroundColor = "yellow"
+  }
+}
+
+placeWariors();
+
+function playRoulette() {
+  let choice = chooseWarior();
+  let h1 = document.createElement("h1");
+  const container = document.querySelector(".container");
+  h1.textContent = choice;
+  container.appendChild(h1);
+  h1.className = "choice";
+}
+
+playRoulette();
+
+//window.onload = createDivs;
