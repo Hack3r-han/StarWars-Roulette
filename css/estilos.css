@@ -12,7 +12,7 @@ main {
 
 /* ---------- Header ----------- */
 header {
-  grid-area: header;
+  /* grid-area: header; */
   background-color: #000000;
   display: flex;
   justify-content: center;
@@ -21,10 +21,10 @@ header {
   max-height: 100px; /* Ajusta la altura máxima del header según tus necesidades */
 }
 
-.imgLogo {
+.divHeader {
   height: auto; /* Establecer la altura automática */
   width: 40%; /* Reducir el ancho de la imagen al 40% de su tamaño original */
-  max-width: 100%; /* Ajusta el ancho máximo según tu preferencia */
+  max-width: 80%; /* Ajusta el ancho máximo según tu preferencia */
 }
 
 figure {
@@ -34,7 +34,7 @@ figure {
 /* ------------- Section - contenedor principal ------------- */
 .section-principal {
   grid-area: section-principal;
-  background: url("/images/bg-img.png") center/cover no-repeat;
+  background: url("../images/bg-img.png") center/cover no-repeat;
   display: flex;
   justify-content: center;
 }
@@ -61,30 +61,31 @@ figure {
 /* Animación de las letras */
 .div-anima {
   position: relative;
-  top: 20%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
-  max-width: 1000px;
+  max-width: 900px;
+  height: 200px;
   overflow: hidden;
 }
 
 .div-trapezoide {
   position: relative;
-  background-color: rgba(10, 10, 10, 0.7);
+  background-color: rgba(121, 21, 21, 0.4);
   /* Color de fondo con transparencia */
   transform-origin: bottom;
-  transform: perspective(20px) rotateX(1.5deg);
+  transform: perspective(25px) rotateX(3deg);
 }
 
 .div-animaLetras p {
   color: #f4db00;
   margin: 0;
   font-weight: bolder;
-  font-size: 15px;
-  line-height: 30px;
+  font-size: 20px;
+  line-height: 25px;
   font-family: "Roboto", sans-serif;
-  animation: animacion 4s linear infinite;
+  animation: animacion 6s linear infinite;
 }
 
 @keyframes animacion {
