@@ -3,8 +3,9 @@
 body {
   height: 100vh;
   margin: 0;
-  background: url("/images/bg-img.png") center/cover no-repeat;
+  background: url("../images/bg-img.png") center/cover no-repeat;
   font-family: "Roboto-bold", sans-serif;
+  height: 140vh;
 }
 
 header {
@@ -24,7 +25,7 @@ figure {
 .section-principal {
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: repeat(1, 7fr);
+  /* grid-template-columns: repeat(1, 7fr); */
   justify-content: center;
   text-align: center;
 }
@@ -53,7 +54,7 @@ input::placeholder {
 #agregar-btn,
 #elimina-btn,
 #btnModal {
-  margin: 10px;
+  /* margin: 10px; */
   text-align: center;
   padding: 10px;
   text-decoration: none;
@@ -99,7 +100,8 @@ button {
 }
 
 .img-btn-reiniciar {
-  height: 5em;
+  height: 3em;
+  margin-top: 2rem;
   transition: all 0.5s ease;
   transform: scale(1);
 }
@@ -184,13 +186,13 @@ h5 {
     transform: rotate(0deg);
   }
   30% {
-    transform: rotate(10deg);
+    transform: rotate(40deg);
   }
   60% {
     transform: rotate(0deg);
   }
   100% {
-    transform: rotate(10deg);
+    transform: rotate(40deg);
   }
 }
 .choice {
@@ -230,4 +232,12 @@ embed {
 
 button:active + embed {
   display: block;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  gap: 2rem;
 }
