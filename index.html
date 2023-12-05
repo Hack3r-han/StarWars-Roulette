@@ -5,87 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ruleta</title>
     <link rel="stylesheet" type="text/css" href="css/estilos.css" />
+    <!--Se integra Font Awesome para fuentes, estilos e iconos-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+
+    <!-- Reproductor de audio para el tema de Star Wars -->
+    <audio id="starWarsTheme" autoplay>
+      <source src="sounds/star_wars_theme.mp3" type="audio/mp3" loop>
+      Tu navegador no soporta el elemento de audio.
+    </audio>
   </head>
 
   <body>
-    <!--                            Contenedor principal                    -->
+    <!-- Contenedor principal -->
     <main>
-      <!--            *********        Header logo        *********        -->
-
+      <!-- Header logo -->
       <header>
         <div class="divHeader">
-          <!--Img del logo -->
+          <!-- Img del logo -->
           <figure>
             <img class="imgLogo" src="images/Star_Wars_Logo 1.png" alt="Imagen de logo"/>
           </figure>
         </div>
       </header>
 
-      <!--            *********        Section  - contenedor principal      *********        -->
-
+      <!-- Section - contenedor principal -->
       <section class="section-principal">
         <div class="div-Principal">
-          <!--       1.       div  Letras         -->
+          <!-- 1. div Letras -->
           <div class="div-pLetras">
             <p>Hace mucho tiempo en una galaxia muy, muy lejana...</p>
           </div>
 
-          <!--       2.       div  Boton - Animación          -->
+          <!-- 2. div Boton - Animación -->
           <div class="div-anima">
-            <!--          Boton Animación         -->
+            <!-- Boton Animación -->
             <!-- <div>
-                            <img class="img-animacion" src="images/play-btn2.png" alt="Boton de inicio">
-                    </div>-->
-        
-                    <!--          Animación de las letras       -->
-                    
-                        <div class="div-trapezoide">
-                            <div class="div-animaLetras">
-                                <p>Lorem ipsum dolor sit amet. In sunt praesentium et minima...</p>
-                                <p>Lorem ipsum dolor sit amet. In sunt praesentium et minima...</p>
-                                <p>Lorem ipsum dolor sit amet. In sunt praesentium et minima...</p>
-                                <p>Lorem ipsum dolor sit amet. In sunt praesentium et minima...</p>
-                                <p>Lorem ipsum dolor sit amet. In sunt praesentium et minima...</p>
-                            </div>
-                        </div> 
-        
-                </div>
-        
-                <!--          3.   div  Boton de inicio             -->
-        
-                <div class="div-botonInicio">
-        
-                    <div>
-                        <!--Imagen Yoda -->
-                        <figure>
-                            <img class="img-Yoda" src="images/baby-yoda 1.png" alt="Imagen de yoda" />
-                        </figure>
-                    </div>
-        
-                    <!--          Boton Inicio  - vicula a la siguiente página       -->
-                    <div>
-                        <a href="/generador-index.html">
-                        <button class="boton-inicio">Tu aventura comienza aquí</button>
-                        </a>
-                    </div>
-        
-                </div>|
-        
+                <img class="img-animacion" src="images/play-btn2.png" alt="Boton de inicio">
+            </div>-->
+
+            <!-- Animación de las letras -->
+            <div class="div-trapezoide">
+              <div class="div-animaLetras">
+                <p>Lorem ipsum dolor sit amet. In sunt praesentium et minima...</p>
+                <p>Lorem ipsum dolor sit amet. In sunt praesentium et minima...</p>
+                <p>Lorem ipsum dolor sit amet. In sunt praesentium et minima...</p>
+                <p>Lorem ipsum dolor sit amet. In sunt praesentium et minima...</p>
+                <p>Lorem ipsum dolor sit amet. In sunt praesentium et minima...</p>
+              </div>
             </div>
-        </section>
+          </div>
 
-      <!--                 *********            footer              *********          -->
+          <!-- 3. div Boton de inicio -->
+          <div class="div-botonInicio">
+            <div>
+              <!-- Imagen Yoda -->
+              <figure>
+                <img class="img-Yoda" src="images/baby-yoda 1.png" alt="Imagen de yoda" />
+              </figure>
+            </div>
 
+            <!-- Boton Inicio - vincula a la siguiente página -->
+            <div>
+              <a href="/generador-index.html">
+                <button class="boton-inicio">Tu aventura comienza aquí</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
       <footer class="footer">
         <div class="divFooter">
-          <figure>
-            <img class="imgFacebook" src="images/icon _facebook_.png" alt="Imagen de facebook"/>
-            <img class="imgInstagram" src="images/icon _instagram_.png" alt="Imagen de instagram"/>
-            <img class="imgTwitter" src="images/icon _twitter_.png" alt="Imagen de twitter"/>
-          </figure>
-
-          <div>
-            <p class="p-div-footer">Desarrollando y evaluando software © 2022</p>
+          <!-- Copyright y símbolo copyright a la izquierda -->
+          <div class="copyright">
+            <p>Padawapos todos los derechos reservados 2023 &copy;</p>
+          </div>
+          <!-- Iconos centrados -->
+          <div class="iconos">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+          </div>
+          <!-- Frase centrada debajo de los iconos -->
+          <div class="frase">
+            <p>Desarrollando y evaluando software &copy; 2022</p>
           </div>
         </div>
       </footer>

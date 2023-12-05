@@ -4,11 +4,12 @@ let nombresArray = ["Maxwell", "Alicia", "Jose", "Mercedes", "Jander", "Yessi", 
   "Victor", "Yady", "Alvaro", "Roxana", "Elena",
 ];
 
-// ********* Función para elegir nombre aleatorio **********
+// ********* Función para elegir nombre aleatorio y reproducir sonido R2D2 **********
 function elegirNombreRandom() {
   let resultado = document.getElementById("randomResultado");
   let nombreAleatorio = obtenerNombreAleatorio(nombresArray);
   resultado.textContent = nombreAleatorio;
+  reproducirSonido('audioR2D2');
 }
 
 // ********* Función que toma array como argumento y devuelve elemento aleatorio **********
@@ -57,11 +58,11 @@ function agregarNombre() {
   if (newName !== "") {
     nombresArray.push(newName);
     addElementInput.value = "";
-    mostrarNombreModal();
+    reproducirSonido('audioYesMaster');
   }
 }
 
-// ********* Función para eliminar un elemento del array **********
+// ********* Función para eliminar un elemento del array y reproducir sonido Chewbaca **********
 function eliminarNombre() {
   let removeElementInput = document.getElementById("nombreEliminar");
   let nameToRemove = removeElementInput.value.trim();
@@ -72,18 +73,58 @@ function eliminarNombre() {
     if (index !== -1) {
       nombresArray.splice(index, 1);
       removeElementInput.value = "";
-      mostrarNombreModal();
+      reproducirSonido('audioChewbaca');
     } else {
       alert("El nombre no existe en el listado");
     }
   }
 }
 
-// ********* Nueva función para reiniciar con sonido asociada al clic del botón img-btn-reiniciar *********
-document.querySelector('.img-btn-reiniciar').addEventListener('click', function() {
-  // Resto del código para reiniciar...
+// ********* Función para reproducir sonido R2D2 **********
+function reproducirSonido(idAudio) {
+  let audio = document.getElementById(idAudio);
+  audio.play();
+}
 
-  // Reproducir el sonido al reiniciar
-  let sound = document.getElementById("sound");
-  sound.play();
+// ********* Función para reproducir sonido Pistol al hacer clic en el botón de reinicio **********
+function reproducirSonidoPistolDesdeBoton() {
+  reproducirSonido('audioPistol');
+}
+
+// ********* Función para redireccionar a la página de inicio **********
+function redireccionarInicio() {
+  window.location.href = "/index.html";
+}
+
+// ********* Agregar más funciones según sea necesario *********
+
+// ********* Agrega el elemento de audio para R2D2 *********
+function reproducirSonidoR2D2() {
+  let audioR2D2 = document.getElementById('audioR2D2');
+  audioR2D2.play();
+}
+
+// ********* Agrega el elemento de audio para Yes Master *********
+function reproducirSonidoYesMaster() {
+  let audioYesMaster = document.getElementById('audioYesMaster');
+  audioYesMaster.play();
+}
+
+// ********* Agrega el elemento de audio para Chewbaca *********
+function reproducirSonidoChewbaca() {
+  let audioChewbaca = document.getElementById('audioChewbaca');
+  audioChewbaca.play();
+}
+
+// ********* Agrega el elemento de audio para Pistol *********
+function reproducirSonidoPistol() {
+  let audioPistol = document.getElementById('audioPistol');
+  audioPistol.play();
+}
+
+
+/* JavaScript para detener la reproducción del audio theme después de que se complete */
+document.getElementById('starWarsTheme').addEventListener('ended', function() {
+  this.currentTime = 0; // Reinicia el tiempo de reproducción
+  this.pause(); // Pausa la reproducción
 });

@@ -80,15 +80,19 @@
         </div>
       </div>
 
-      <!-- Boton de ir a inicio -->
+      <!-- Boton de ir a inicio (cambiado código para correcciones)--> 
       <div class="div-boton-inicio">
-        <a href="/index.html">
-          <button><img src="images/return-btn.png" alt="Botón" class="img-btn-reiniciar"></button>
-        </a>
+        <button onclick="reproducirSonidoPistolDesdeBoton(); redireccionarInicio();">
+          <img src="images/return-btn.png" alt="Botón" class="img-btn-reiniciar">
+        </button>
       </div>
 
       <!-- Audio para el sonido -->
-      <audio id="sound" src="/sounds/pistol.mp3"></audio>
+      <audio id="audioPistol" src="/sounds/pistol.mp3"></audio>
+      <audio id="audioYesMaster" src="/sounds/yesmaster.mp3"></audio>
+      <audio id="audioChewbaca" src="sounds/chewbaca.mp3"></audio>
+      <audio id="audioR2D2" src="sounds/r2d2.mp3"></audio>
+
 
     </section>
 
