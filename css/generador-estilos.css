@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 body {
   height: 100vh;
@@ -18,10 +18,6 @@ header {
   height: 100px;
 }
 
-figure {
-  margin: 0px;
-}
-
 .section-principal {
   display: grid;
   grid-template-rows: 1fr;
@@ -33,15 +29,15 @@ figure {
 .instrucciones1,
 .instrucciones2 {
   color: #4bd5ee;
-
-  font-size: 17px;
+  font-size: 22px;
   text-align: center;
   margin: 0px;
+  padding: 1rem;
 }
 
 input[type="text"] {
   padding: 10px;
-  font-size: 15px;
+  font-size: 20px;
   border: 2px solid #ffa800;
   border-radius: 10px;
   background-color: rgba(247, 185, 156, 0.7);
@@ -59,7 +55,7 @@ input::placeholder {
   padding: 10px;
   text-decoration: none;
   color: #f4db00;
-  font-size: 15px;
+  font-size: 20px;
   border-radius: 20px;
   border: 2px solid #ffa800;
   background-color: rgba(241, 91, 21, 0.7);
@@ -86,6 +82,9 @@ button {
   height: 5em;
   transition: all 0.5s ease;
   transform: scale(1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
 
 .img-btn-play:hover {
@@ -96,7 +95,6 @@ button {
   color: #f4db00;
   font-size: 15px;
   text-align: center;
-  margin: 0px;
 }
 
 .img-btn-reiniciar {
@@ -104,6 +102,9 @@ button {
   margin-top: 2rem;
   transition: all 0.5s ease;
   transform: scale(1);
+  position: absolute;
+  bottom: 7rem;
+  left: 52%;
 }
 
 .img-btn-reiniciar:hover {
@@ -128,7 +129,7 @@ button {
   padding: 20px;
   border: 2px solid #f4db00;
   width: 80%;
-  height: 100%;
+  height: 85%;
 }
 
 .cerrar {
@@ -164,20 +165,30 @@ h5 {
   color: yellow;
 }
 
+.play {
+  color: #4bd5ee;
+  font-size: 24px;
+  background-color: #5d5404;
+  border-radius: 20%;
+  padding: 0.6rem;
+  margin-top: 2rem;
+  border: #f4db00 3px solid;
+}
+
 .pulse {
   animation: pulse-animation 0.8s infinite;
 }
 
 @keyframes pulse-animation {
   0% {
-    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 0 0px rgba(209, 203, 203, 0.6);
   }
   100% {
-    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 20px rgba(236, 239, 54, 0);
   }
 }
 .spin {
-  animation: spin 5s linear infinite;
+  animation: spin 3s linear infinite;
 }
 @keyframes spin {
   0% {
@@ -194,16 +205,17 @@ h5 {
   }
 }
 .choice {
-  width: 8%;
-  height: 8%;
+  width: 120px;
+  height: 90px;
   border-radius: 50%;
-  color: rgb(97, 9, 9);
+  color: #4bd5ee;
   position: fixed;
-  top: 50%;
-  left: 50%;
-  background-color: rgb(210, 203, 183);
+  top: 30%;
+  left: 42%;
+  background-color: rgb(10, 4, 58);
   text-align: center;
-  padding-top: 4%;
+  padding-top: 8%;
+  border: #4bd5ee 4px solid;
 }
 
 /* Media Queries */
