@@ -121,20 +121,12 @@ button {
 }
 
 .contenido-modal {
-  background: url("/images/bg-img.png") center/cover no-repeat;
+  background: url("../images/bg-img.png") center/cover no-repeat;
   margin: auto;
   padding: 20px;
   border: 2px solid #f4db00;
   width: 80%;
-}
-
-ul {
-  font-family: "Roboto-bold", sans-serif;
-  text-align: center;
-  color: #4bd5ee;
-  font-size: 17px;
-  list-style-type: none;
-  padding: 0;
+  height: 400px;
 }
 
 .cerrar {
@@ -149,24 +141,6 @@ ul {
   color: rgb(201, 114, 15);
   text-decoration: none;
   cursor: pointer;
-}
-
-/* Media Queries */
-
-/* Para tablets hasta 1000*1300 */
-@media screen and (max-width: 1000px) {
-  .section-principal {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
-/* Para smartphones hasta 390*840 */
-@media screen and (max-width: 390px) {
-  .section-principal {
-    grid-template-columns: repeat(1, 1fr);
-    margin-left: 10px;
-    margin-right: 10px;
-  }
 }
 
 /* Modal Styles */
@@ -230,4 +204,22 @@ h5 {
   background-color: rgb(210, 203, 183);
   text-align: center;
   padding-top: 4%;
+}
+
+/* Media Queries */
+
+/* Para tablets hasta 1000*1300 */
+@media screen and (max-width: 1000px) {
+  .section-principal {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Para smartphones hasta 390*840 */
+@media screen and (max-width: 390px) {
+  .section-principal {
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }

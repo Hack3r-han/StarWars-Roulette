@@ -1,7 +1,7 @@
 // ********* Array de base *********
 let nombresArray = ["Maxwell", "Alicia", "Jose", "Mercedes", "Jander", "Yessi", "Anzuly", "Neimy", "Hanna",
-  "Isaac", "Juanjo", "David", "Paolo", "Alba", "Joaco", "Alberto", "Denisse", "Alfredo", "Marcela", "Laudy",
-  "Victor", "Yady", "Alvaro", "Roxana", "Elena",
+  // "Isaac", "Juanjo", "David", "Paolo", "Alba", "Joaco", "Alberto", "Denisse", "Alfredo", "Marcela", "Laudy",
+  // "Victor", "Yady", "Alvaro", "Roxana", "Elena",
 ];
 
 // ********* Función para elegir nombre aleatorio y reproducir sonido R2D2 **********
@@ -36,9 +36,7 @@ window.onload = function () {
 };
 
 // ********* Función para mostrar el listado completo de nombresArray **********
-function mostrarNombreModal() {
-  let modal = document.getElementById("miModal");
-  modal.style.display = "block";
+
   // let listadoNombres = document.getElementById("listadoNombres");
 
   /* listadoNombres.innerHTML = "";
@@ -48,7 +46,7 @@ function mostrarNombreModal() {
     listItem.textContent = name;
     listadoNombres.appendChild(listItem);
   }); */
-}
+
 
 // ********* Función para agregar un elemento al array **********
 function agregarNombre() {
@@ -131,14 +129,20 @@ document.getElementById('starWarsTheme').addEventListener('ended', function() {
 
 /* Modal */
 
-const wariors = [
-  "David",
-  "Laudy",
-  "Hannah",
-  "Paolo",
-  "Alba",
-  "Roxana",
-  "Alvaro",
+function mostrarModal() {
+  let modal = document.getElementById("miModal");
+  modal.style.display = "block";
+  placeName()
+}
+
+// const names = [
+//   "David",
+//   "Laudy",
+//   "Hannah",
+//   "Paolo",
+//   "Alba",
+//   "Roxana",
+//   "Alvaro",
   // "Alfredo",
   // "Maxuel",
   // "Anzuly",
@@ -154,27 +158,26 @@ const wariors = [
   // "Jander",
   // "Denisse",
   // "Marcela",
-  // "Elena",
-];
+  // "Elena",]
 
-function chooseWarior() {
-  let index = Math.floor(Math.random() * wariors.length);
-  nameWarior = wariors[index];
-  return nameWarior;
+
+function chooseName() {
+  let index = Math.floor(Math.random() * nombresArray.length);
+  nombreElegido = nombresArray[index];
+  return nombreElegido;
 }
 
-function placeWariors() {
-  const container = document.querySelector(".container");
-  for (let i = 0; i < wariors.length; i++) {
+function placeName() {
+  const container = document.querySelector(".contenido-modal");
+  for (let i = 0; i < nombresArray.length; i++) {
     const warior = document.createElement("div");
     warior.className = "warior pulse ";
-    warior.innerHTML = `<h5>${chooseWarior()}</h5>`;
+    warior.innerHTML = `<h5>${chooseName()}</h5>`;
     container.appendChild(warior);
+    container.appendChild
 
-    const randomX = Math.floor(Math.random() * (window.innerWidth * 0.9));
-    const randomY = Math.floor(
-      Math.random() * (window.innerHeight * 0.9)
-    );
+    const randomX = Math.floor(Math.random() * window.innerWidth);
+    const randomY = Math.floor(Math.random() * window.innerHeight);
 
     console.log(randomY);
 
@@ -182,21 +185,22 @@ function placeWariors() {
     warior.style.left = `${randomX}px`;
     warior.style.top = `${randomY}px`;
     warior.style.borderRadius = "50%";
-    // warior.style.backgroundColor = "yellow"
+    warior.style.backgroundColor = "yellow"
   }
 }
 
-placeWariors();
+placeName();
 
 function playRoulette() {
-  let choice = chooseWarior();
+  let choice = chooseName();
   let h1 = document.createElement("h1");
-  const container = document.querySelector(".container");
+  const container = document.querySelector(".contenido-modal");
   h1.textContent = choice;
   container.appendChild(h1);
   h1.className = "choice";
 }
 
-playRoulette();
+let contenido = document.querySelector(".contenido-modal")
+contenido.textContent = "HELP"
 
-//window.onload = createDivs;
+playRoulette();
