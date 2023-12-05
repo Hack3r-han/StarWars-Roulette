@@ -4,8 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Star Wars Roulette</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap"
+      rel="stylesheet"/>
     <link rel="stylesheet" href="../css/generador-estilos.css" />
-    <script src="../js/script-generador.js"></script>
+    <link rel="stylesheet" href="../css/roulette.css">
   </head>
 
   <body>
@@ -66,12 +71,12 @@
 
         <div class="div-nombreAleatorio">
           <div>
-            <p id="randomResultado"></p>
+            <p id="randomResultado" class="container"></p>
             <!--registra visiblemente el Elegido en la página-->
           </div>
           <div>
-            <button onclick="elegirNombreRandom()">
-              <img src="images/play-btn.png" alt="Botón" class="img-btns" />
+            <button onclick="playRoulette()">
+              <img src="../images/play-btn.png" alt="Botón" class="img-btns" />
             </button>
           </div>
         </div>
@@ -96,5 +101,7 @@
         </div>
       </section>
     </main>
+    <script src="../js/script-generador.js"></script>
+    <script src="../js/roulette.js"></script>
   </body>
 </html>

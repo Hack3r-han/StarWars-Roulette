@@ -1,5 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
+@media only screen and (min-width: 700px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  body {
+    background-color: rgb(230, 173, 189);
+  }
+}
+
 body {
   height: 100vh;
   margin: 0;
