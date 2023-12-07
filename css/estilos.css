@@ -1,15 +1,12 @@
 /* Uso de regla @import para importar fuentes externas en CSS */
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-/* Grilla */
 body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
 }
-
-/* Otros estilos generales */
 
 /* ---------- Header ----------- */
 header {
@@ -22,7 +19,6 @@ header {
 .imgLogo {
   max-height: 100px;
 }
-
 
 /* ------------- Section - contenedor principal ------------- */
 .section-principal {
