@@ -120,10 +120,16 @@ header {
   align-items: center;
   gap: 20px;
   font-size: 200%;
+  transition: 0.3s;
+  transition-property: transform;
 }
 
 a {
   color: yellow;
+}
+
+.social-media a:hover {
+  transform: scale(1.2);
 }
 
 .copyright {
