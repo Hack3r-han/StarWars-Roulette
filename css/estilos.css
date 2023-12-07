@@ -62,7 +62,7 @@ header {
 
 .div-trapezoide {
   position: relative;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.9);
   transform-origin: bottom;
   transform: perspective(30px) rotateX(3deg);
   overflow: hidden;
@@ -72,9 +72,9 @@ header {
   color: #f4db00;
   margin: 0;
   font-weight: bolder;
-  font-size: 30px;
+  font-size: 28px;
   text-align: justify;
-  animation: animacion 12s linear infinite;
+  animation: animacion 10s linear infinite;
 }
 
 @keyframes animacion {
