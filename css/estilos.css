@@ -109,7 +109,7 @@ header {
 .footer {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto; /* Automatically sized rows */
+  grid-template-rows: auto auto; 
   background-color: #000000;
   padding: 30px;
 }
