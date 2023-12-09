@@ -28,9 +28,7 @@ header {
 }
 
 .div-Principal {
-  /* display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: repeat(1, 3fr); */
+
   justify-content: center;
   text-align: center;
 }
@@ -38,7 +36,7 @@ header {
 /* 1. div letras */
 .div-pLetras p {
   color: #4bd5ee;
-  font-size: 30px;
+  font-size: 32px;
   font-weight: 900;
   text-align: center;
   margin-top: 4rem;
@@ -58,19 +56,20 @@ header {
 
 .div-trapezoide {
   position: relative;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.6);
   transform-origin: bottom;
   transform: perspective(30px) rotateX(3deg);
   overflow: hidden;
 }
 
 .div-animaLetras p {
-  color: #f4db00;
+  color: #d4c110;
   margin: 0;
   font-weight: bolder;
   font-size: 28px;
   text-align: justify;
   animation: animacion 5s linear infinite;
+  padding: 0 1rem;
 }
 
 @keyframes animacion {
@@ -142,26 +141,46 @@ a {
 
 /* RESPONSIVO */
 
-/* Tablets hasta 850x1100 */
-@media screen and (max-width: 850px) {
-  .div-Principal {
-    grid-template-columns: repeat(1, 2fr);
+/* desktop*/
+@media screen and (min-width: 1400px) {
+  
   }
-}
 
-/* Smartphones hasta 390x840 */
-@media screen and (max-width: 390px) {
-  .div-Principal {
-    grid-template-columns: repeat(1, 1fr);
+
+/* mobile */
+@media screen and (max-width: 500px) {
+  .div-pLetras p {
+    font-size: 20px;
+    padding: 0 1rem;
   }
-  .imgLogo {
-    width: 80%;
+  .div-anima {
+    top: 70px;
+    margin-bottom: -6rem;
+  }
+  .div-animaLetras p {
+    font-size: 20px;
+    padding: 0 1rem;
   }
   .img-Yoda {
-    width: 50%;
+    width: 20%;
   }
   .boton-inicio {
-    font-size: 12px;
-    padding: 5px 8px;
+    padding: 5px 10px;  
+    font-size: 11px;
+    border-radius: 10px;
+    border: 2px solid #ffa800;
+    background-color: rgba(241, 91, 21, 0.7);
+    margin-bottom: 3rem;
   }
+  .social-media {
+    gap: 10px;
+    font-size: 120%;
+  }
+  .footer {
+    padding: 10px;
+  }
+  .copyright {
+     font-size: 9px;
+  }
+  
 }
