@@ -1,7 +1,6 @@
 /* Uso de regla @import para importar fuentes externas en CSS */
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-/* Grilla */
 body {
   box-sizing: border-box;
   margin: 0;
@@ -9,46 +8,28 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-main {
-  display: grid;
-  grid-template-areas: "header" "section-principal" "footer";
-}
-
-/* Otros estilos generales */
-
 /* ---------- Header ----------- */
 header {
-  /* grid-area: header; */
   background-color: #000000;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px; /* Ajusta el padding según tu preferencia */
-  max-height: 100px; /* Ajusta la altura máxima del header según tus necesidades */
+  justify-content: center; 
+  padding-bottom: 10px; 
 }
 
-.divHeader {
-  height: auto; /* Establecer la altura automática */
-  width: 40%; /* Reducir el ancho de la imagen al 40% de su tamaño original */
-  max-width: 80%; /* Ajusta el ancho máximo según tu preferencia */
+.imgLogo {
+  max-height: 150px;
 }
 
-figure {
-  margin: 0px;
-}
 
 /* ------------- Section - contenedor principal ------------- */
 .section-principal {
-  grid-area: section-principal;
   background: url("../images/bg-img.png") center/cover no-repeat;
   display: flex;
   justify-content: center;
 }
 
 .div-Principal {
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: repeat(1, 3fr);
+
   justify-content: center;
   text-align: center;
 }
@@ -56,23 +37,21 @@ figure {
 /* 1. div letras */
 .div-pLetras p {
   color: #4bd5ee;
-  font-size: 30px;
+  font-size: 32px;
   font-weight: 900;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 
-/* 2. div Boton - Animación */
+/* 2. div Animación */
 
-/* Animación de las letras */
 .div-anima {
   position: relative;
-  top: 50%;
+  top: 15%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
   max-width: 900px;
-  height: 400px;
   overflow: hidden;
 }
 
@@ -88,12 +67,13 @@ figure {
 }
 
 .div-animaLetras p {
-  color: #f4db00;
+  color: #d4c110;
   margin: 0;
   font-weight: bolder;
   font-size: 28px;
-  line-height: 36px;
-  animation: animacion 12s linear infinite;
+  text-align: justify;
+  animation: animacion 5s linear infinite;
+  padding: 0 1rem;
 }
 
 @keyframes animacion {
@@ -122,76 +102,93 @@ figure {
   border: 2px solid #ffa800;
   background-color: rgba(241, 91, 21, 0.7);
   margin-bottom: 3rem;
-  /* Color de fondo, transparencia */
 }
 
 .boton-inicio:hover {
-  background-color: rgba(170, 185, 41, 0.7);
-  /* Cambia color*/
+  background-color: rgba(170, 185, 41, 0.7); /* Cambia color*/
 }
 
-/* S - Footer */
+/* FOOTER */
 .footer {
-  grid-area: footer;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto; 
   background-color: #000000;
-  padding: 10px; /* Ajusta el padding según tu preferencia */
+  padding: 30px;
 }
 
-.divFooter {
-  /* Grilla */
+.social-media {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto 0;
-
-  /* Opcional: Puedes ajustar el espacio entre los elementos si lo deseas */
   gap: 20px;
+  font-size: 200%;
+  transition: 0.3s;
+  transition-property: transform;
 }
 
-.imgSocial {
-  height: 20px;
+a {
+  color: yellow;
 }
 
-/* Copyright y símbolo copyright a la izquierda */
+.social-media a:hover {
+  transform: scale(1.2);
+}
+
 .copyright {
-  margin-right: auto; /* Empuja hacia la izquierda */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #f4db00;
   font-size: 12px;
 }
 
-/* Frase centrada debajo de los iconos */
-.frase {
-  color: #f4db00;
-}
-
 /* RESPONSIVO */
-/* Pantallas hasta 1400x1000 */
-@media screen and (max-width: 1400px) {
-  .imgLogo {
-    width: 60%;
-  }
-}
 
-/* Tablets hasta 850x1100 */
-@media screen and (max-width: 850px) {
-  .div-Principal {
-    grid-template-columns: repeat(1, 2fr);
+/* desktop*/
+@media screen and (min-width: 1400px) {
+  
   }
-}
 
-/* Smartphones hasta 390x840 */
-@media screen and (max-width: 390px) {
-  .div-Principal {
-    grid-template-columns: repeat(1, 1fr);
+
+/* mobile */
+@media screen and (max-width: 500px) {
+
+  header {
+    margin-bottom: 0px;
   }
+  
   .imgLogo {
-    width: 80%;
+    height: 100px;
+  }
+  .div-pLetras p {
+    font-size: 20px;
+    padding: 0 1rem;
+  }
+  .div-anima {
+    top: 70px;
+    margin-bottom: -6rem;
+  }
+  .div-animaLetras p {
+    font-size: 20px;
+    padding: 0 1rem;
   }
   .img-Yoda {
-    width: 50%;
+    width: 20%;
   }
   .boton-inicio {
-    font-size: 12px;
-    padding: 5px 8px;
+    padding: 5px 10px;  
+    font-size: 11px;
   }
+  .social-media {
+    gap: 10px;
+    font-size: 120%;
+  }
+  .footer {
+    padding: 10px;
+  }
+  .copyright {
+     font-size: 9px;
+  }
+  
 }
