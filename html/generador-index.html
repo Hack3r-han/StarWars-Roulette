@@ -32,12 +32,7 @@
         </div>
 
         <!-- INGRESAR EL ANIMACION DE LOS NOMBRES: DESDE AQUÍ -->
-
-        <div class="div-agregaNombre">
-          <div>
-            <ul id="nombreLista"></ul>
-            <!--registra visiblemente la lista en la página-->
-          </div>
+        <div class="buttonContainer">
           <div>
             <input
               type="text"
@@ -47,13 +42,6 @@
           </div>
           <div>
             <button onclick="agregarNombre()" id="agregar-btn">Agregar</button>
-          </div>
-        </div>
-
-        <div class="div-eliminaNombre">
-          <div>
-            <ul id="nombreLista"></ul>
-            <!--registra visiblemente la lista en la página-->
           </div>
           <div>
             <input
@@ -67,38 +55,63 @@
               Eliminar
             </button>
           </div>
-        </div>
 
-        <div class="div-nombreAleatorio">
-          <div>
-            <p id="randomResultado" class="container"></p>
-            <!--registra visiblemente el Elegido en la página-->
-          </div>
-          <div>
-            <button onclick="playRoulette()">
-              <img src="../images/play-btn.png" alt="Botón" class="img-btns" />
-            </button>
-          </div>
+          <!-- <div class="iv-nombreAleatorio">
+            <div>
+              <p id="randomResultado"></p>
+            </div>
+          </div> -->
         </div>
 
         <!-- INGRESAR EL ANIMACION DE LOS NOMBRES: HASTA AQUÍ -->
 
         <div class="instrucciones2">
-          <p>¡Haz clic en el botón para generar nombre aleatorio!</p>
-          <p>Qué la fuerza te acompañe.</p>
+          <p>
+            ¡Haz clic en el botón para generar nombre aleatorio! Qué la fuerza
+            te acompañe!
+          </p>
         </div>
 
-        <div class="div-boton-inicio">
-          <a href="/index.html">
-            <button class="btn-reiniciar">
-              <img
-                src="images/transbordador.png"
-                alt="Botón"
-                class="img-btns-reiniciar"
-              />
-            </button>
-          </a>
+        <div>
+          <button onclick="mostrarModal()">
+            <img
+              src="../images/play-btn.png"
+              alt="Botón"
+              class="img-btn-play"
+            />
+          </button>
         </div>
+
+        <div id="miModal" class="modal">
+          <div class="contenido-modal">
+            <span class="cerrar" id="btnCerrar2">&times;</span>
+            <button class="play" onclick="playRoulette()">
+              JUEGA
+            </button>
+            <embed src="../sounds/chewbaca.mp3" />
+          </div>
+        </div>
+
+        <!-- Boton de ir a inicio (cambiado código para correcciones)-->
+        <div class="div-boton-inicio">
+          <button
+            onclick="reproducirSonidoPistolDesdeBoton(); redireccionarInicio();"
+          >
+            <a href="../html/index.html">
+              <img
+                src="../images/return-btn.png"
+                alt="Botón"
+                class="img-btn-reiniciar"
+              />
+            </a>
+          </button>
+        </div>
+
+        <!-- Audio para el sonido -->
+        <audio id="audioPistol" src="../sounds/pistol.mp3"></audio>
+        <audio id="audioYesMaster" src="../sounds/yesmaster.mp3"></audio>
+        <audio id="audioChewbaca" src="../sounds/chewbaca.mp3"></audio>
+        <audio id="audioR2D2" src="../sounds/r2d2.mp3"></audio>
       </section>
     </main>
     <script src="../js/script-generador.js"></script>
