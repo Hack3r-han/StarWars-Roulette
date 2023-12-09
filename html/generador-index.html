@@ -9,18 +9,14 @@
   </head>
 
   <body>
-    <main>
       <header>
-        <figure>
           <img
             class="imgLogo"
             src="../images/Star_Wars_Logo 1.png"
             alt="Imagen de logo"
           />
-        </figure>
       </header>
 
-      <section class="section-principal">
         <div class="instrucciones1">
           <p>Es hora de decidir quienes serán los Elegidos.</p>
           <p>Ingresa los nombres a continuación.</p>
@@ -51,31 +47,50 @@
             </button>
           </div>
         </div>
-            <div>
-              <img
-                class="img-Yoda"
-                src="../images/baby-yoda 1.png"
-                alt="Imagen de yoda"
-              />
-            </div>
+            
 
         <!-- INGRESAR EL ANIMACION DE LOS NOMBRES: HASTA AQUÍ -->
 
-        <div class="instrucciones2">
-          <p>
-            ¡Haz clic en el botón para generar nombre aleatorio! Qué la fuerza
-            te acompañe!
-          </p>
-        </div>
-
-        <div>
-          <button onclick="mostrarModal()">
+        <div class="placeButton">
+          <div>
             <img
-              src="../images/play-btn.png"
-              alt="Botón"
-              class="img-btn-play"
+              class="img-Yoda"
+              src="../images/baby-yoda 1.png"
+              alt="Imagen de yoda"
             />
-          </button>
+          </div>
+          <div class="relativePosition">
+            <button onclick="mostrarModal()">
+              <img
+                src="../images/play-btn.png"
+                alt="Botón"
+                class="img-btn-play"
+              />
+            </button>
+          </div>
+
+        
+          <div class="instrucciones2">
+            <p>
+              ¡Haz clic en el botón para generar nombre aleatorio!
+            </p>
+            <p> <em>¡Qué la fuerza te acompañe!</em></p>
+          </div>
+
+          <!-- Boton de ir a inicio (cambiado código para correcciones)-->
+          <div class="relativePosition">
+            <button
+              onclick="reproducirSonidoPistolDesdeBoton(); redireccionarInicio();"
+            >
+              <a href="../html/index.html">
+                <img
+                  src="../images/return-btn.png"
+                  alt="Botón"
+                  class="img-btn-reiniciar"
+                />
+              </a>
+            </button>
+          </div>
         </div>
 
         <div id="miModal" class="modal">
@@ -84,23 +99,7 @@
             <button class="play" onclick="playRoulette()">
               JUEGA
             </button>
-            <embed src="../sounds/chewbaca.mp3" />
           </div>
-        </div>
-
-        <!-- Boton de ir a inicio (cambiado código para correcciones)-->
-        <div class="div-boton-inicio">
-          <button
-            onclick="reproducirSonidoPistolDesdeBoton(); redireccionarInicio();"
-          >
-            <a href="../html/index.html">
-              <img
-                src="../images/return-btn.png"
-                alt="Botón"
-                class="img-btn-reiniciar"
-              />
-            </a>
-          </button>
         </div>
 
         <!-- Audio para el sonido -->
@@ -108,7 +107,6 @@
         <audio id="audioYesMaster" src="../sounds/yesmaster.mp3"></audio>
         <audio id="audioChewbaca" src="../sounds/chewbaca.mp3"></audio>
         <audio id="audioR2D2" src="../sounds/r2d2.mp3"></audio>
-      </section>
-    </main>
+     
   </body>
 </html>
