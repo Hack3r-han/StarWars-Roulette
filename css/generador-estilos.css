@@ -1,8 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 body {
-    height: 100vh;
-    margin: 0;
+  height: 100vh;
+  margin: 0;
+  background: url("../images/bg-img.png") center/cover no-repeat;
+  font-family: "Roboto-bold", sans-serif;
+  height: 100vh;
 }
 
 header {
@@ -15,97 +18,237 @@ header {
   height: 100px;
 }
 
-figure {
-	margin: 0px;
-}
-/*           -------------         Section  - contenedor principal       -------------           */
-.section-principal{
-    display: grid;
-	grid-template-rows: 1fr;
-  	grid-template-columns: repeat(1, 6fr);
-    justify-content: center;
-    text-align: center;
-    background: url('/images/bg-img.png') center/cover no-repeat; 
+.section-principal {
+  display: grid;
+  grid-template-rows: 1fr;
+  /* grid-template-columns: repeat(1, 7fr); */
+  justify-content: center;
+  text-align: center;
 }
 
-/*           instrucciones1 y 2            */
-
-.instrucciones1, .instrucciones2 {
-    color: #4BD5EE;
-    font-family: 'Roboto-bold', sans-serif;
-    font-size: 20px;
-    text-align: center;
-    margin: 0px;
+.instrucciones1,
+.instrucciones2 {
+  color: #4bd5ee;
+  font-size: 22px;
+  text-align: center;
+  margin: 0px;
+  padding: 1rem;
 }
 
-/*             div-agregaNombre        */
-
-/* BUTONES */
-input[type=text]{
-    padding: 10px;
-    font-family: 'Roboto-bold', sans-serif;
-	font-size: 15px;    
-	border: 2px solid #FFA800;
-    border-radius: 20px;
-    background-color: rgba(247, 185, 156, 0.7);
+input[type="text"] {
+  padding: 10px;
+  font-size: 20px;
+  border: 2px solid #ffa800;
+  border-radius: 10px;
+  background-color: rgba(247, 185, 156, 0.7);
 }
 
-input::placeholder{
-    font-family: 'Roboto-bold', sans-serif;
-    color: #F4DB00;
+input::placeholder {
+  color: #f4db00;
 }
 
-#agregar-btn, #elimina-btn{
-    margin: 10px;
-    font-family: 'Roboto-bold', sans-serif;
-    text-align: center;
-	padding: 10px;
-	text-decoration: none;
-	color: #F4DB00;
-	font-size: 15px;
-	border-radius: 20px;
-	border: 2px solid #FFA800;
-    background-color: rgba(241, 91, 21, 0.7);
+#agregar-btn,
+#elimina-btn,
+#btnModal {
+  /* margin: 10px; */
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  color: #f4db00;
+  font-size: 20px;
+  border-radius: 20px;
+  border: 2px solid #ffa800;
+  background-color: rgba(241, 91, 21, 0.7);
 }
 
-#elimina-btn:hover,#agregar-btn:hover{
-    background-color: rgba(170, 185, 41, 0.7); /* Cambia color*/
+#elimina-btn:hover,
+#agregar-btn:hover {
+  background-color: rgba(170, 185, 41, 0.7);
 }
 
-/* para todos los botones*/
-button{
-    background: none;
-    border: none;
-}
-.img-btns{
-    height: 5em;
+button {
+  background: none;
+  border: none;
 }
 
-/* TEXTO DE LISTA */
-
-#nombreLista, #randomResultado {
-    color: white;
-    font-family: 'Roboto-bold', sans-serif;
-    font-size: 20px;
-    text-align: center;
+#nombreLista,
+#randomResultado {
+  color: white;
+  font-size: 20px;
+  text-align: center;
 }
 
-/* para boton reiniciar*/
-
-.div-boton-inicio p{
-    color: #F4DB00;
-    font-family: 'Roboto-bold', sans-serif;
-    font-size: 15px;
-    text-align: center;
-    margin: 0px;
+.img-btn-play {
+  height: 5em;
+  transition: all 0.5s ease;
+  transform: scale(1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
 
-.img-btns-reiniciar {
-    height: 5em;
-    border-radius: 20px;
+.img-btn-play:hover {
+  transform: scale(1.2) perspective(1px);
 }
 
-.btn-reiniciar:hover {
-    background-color: rgba(170, 185, 41, 0.7); /* Cambia color*/
-    border-radius: 20px;
+.div-boton-inicio p {
+  color: #f4db00;
+  font-size: 15px;
+  text-align: center;
+}
+
+.img-btn-reiniciar {
+  height: 3em;
+  margin-top: 2rem;
+  transition: all 0.5s ease;
+  transform: scale(1);
+  position: absolute;
+  bottom: 7rem;
+  left: 52%;
+}
+
+.img-btn-reiniciar:hover {
+  transform: scale(1.2) perspective(1px);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  padding-top: 20px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(192, 113, 113, 0.4);
+}
+
+.contenido-modal {
+  background: url("../images/bg-img.png") center/cover no-repeat;
+  margin: auto;
+  padding: 20px;
+  border: 2px solid #f4db00;
+  width: 80%;
+  height: 85%;
+}
+
+.cerrar {
+  font-family: "Roboto-bold", sans-serif;
+  color: #f4db00;
+  float: right;
+  font-size: 35px;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+  color: rgb(201, 114, 15);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Modal Styles */
+
+.warior {
+  width: 60px;
+  height: 60px;
+  background-color: rgb(255, 119, 0);
+  background-image: radial-gradient(rgb(255, 111, 0), rgb(255, 234, 0));
+  padding-top: 10px;
+  opacity: 0.8;
+  margin-left: 100px;
+  margin-top: 100px;
+}
+
+h5 {
+  text-align: center;
+  padding-top: -20%;
+  color: yellow;
+}
+
+.play {
+  color: #4bd5ee;
+  font-size: 24px;
+  background-color: #5d5404;
+  border-radius: 20%;
+  padding: 0.6rem;
+  margin-top: 2rem;
+  border: #f4db00 3px solid;
+}
+
+.pulse {
+  animation: pulse-animation 0.8s infinite;
+}
+
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0px rgba(209, 203, 203, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(236, 239, 54, 0);
+  }
+}
+.spin {
+  animation: spin 3s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(40deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(40deg);
+  }
+}
+.choice {
+  width: 120px;
+  height: 90px;
+  border-radius: 50%;
+  color: #4bd5ee;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  background-color: rgb(10, 4, 58);
+  text-align: center;
+  padding-top: 8%;
+  border: #4bd5ee 4px solid;
+}
+
+/* Media Queries */
+
+/* Para tablets hasta 1000*1300 */
+@media screen and (max-width: 1000px) {
+  .section-principal {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Para smartphones hasta 390*840 */
+@media screen and (max-width: 390px) {
+  .section-principal {
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+embed {
+  display: none;
+}
+
+button:active + embed {
+  display: block;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  gap: 2rem;
 }
