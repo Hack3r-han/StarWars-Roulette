@@ -167,10 +167,6 @@ a {
   .boton-inicio {
     padding: 5px 10px;  
     font-size: 11px;
-    border-radius: 10px;
-    border: 2px solid #ffa800;
-    background-color: rgba(241, 91, 21, 0.7);
-    margin-bottom: 3rem;
   }
   .social-media {
     gap: 10px;

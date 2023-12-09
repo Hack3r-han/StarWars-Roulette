@@ -66,11 +66,6 @@ input::placeholder {
   background-color: rgba(170, 185, 41, 0.7);
 }
 
-button {
-  background: none;
-  border: none;
-}
-
 #nombreLista,
 #randomResultado {
   color: white;
@@ -218,24 +213,6 @@ h5 {
   border: #4bd5ee 4px solid;
 }
 
-/* Media Queries */
-
-/* Para tablets hasta 1000*1300 */
-@media screen and (max-width: 1000px) {
-  .section-principal {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
-/* Para smartphones hasta 390*840 */
-@media screen and (max-width: 390px) {
-  .section-principal {
-    grid-template-columns: repeat(1, 1fr);
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-}
-
 embed {
   display: none;
 }
@@ -252,3 +229,35 @@ button:active + embed {
   justify-content: center;
   gap: 2rem;
 }
+
+
+/* Media Queries */
+
+
+
+/* Para smartphones hasta 390*840 */
+@media screen and (max-width: 500px) {
+  .instrucciones1,
+  .instrucciones2 {
+  font-size: 18px;
+  }
+  .img-btn-play {
+    height: 4em;
+    top: 75%;
+    left: 45%;
+  }
+  #agregar-btn,
+  #elimina-btn {
+  font-size: 16px;
+  }
+  input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+  }
+  .img-Yoda {
+    width: 50%;
+  }
+
+
+}
+
