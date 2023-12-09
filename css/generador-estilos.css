@@ -7,7 +7,6 @@ body {
   padding: 0;
   background: url("../images/bg-img.png") center/cover no-repeat;
   font-family: "Roboto-bold", sans-serif;
-  height: 100vh;
 }
 
 header {

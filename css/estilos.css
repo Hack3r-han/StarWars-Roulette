@@ -6,6 +6,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
+  height: 100vh;
 }
 
 /* ---------- Header ----------- */
@@ -26,6 +27,7 @@ header {
   background: url("../images/bg-img.png") center/cover no-repeat;
   display: flex;
   justify-content: center;
+  height: 80vh;
 }
 
 .div-Principal {
@@ -72,13 +74,13 @@ header {
   font-weight: bolder;
   font-size: 28px;
   text-align: justify;
-  animation: animacion 4s linear infinite;
+  animation: animacion 6s linear infinite;
   padding: 0 1rem;
 }
 
 @keyframes animacion {
   from {
-    transform: translateY(80%);
+    transform: translateY(450%);
   }
   to {
     transform: translateY(-100%);
@@ -92,8 +94,8 @@ header {
 
 .boton-inicio {
   text-align: center;
-  padding: 5px 10px;
-  background-color: #ff6d2e;
+  padding: 5px 10px; 
+  background-color: #ff6d2e; 
   text-decoration: none;
   font-weight: bolder;
   color: #f4db00;
@@ -167,7 +169,7 @@ a {
   }
   .div-anima {
     top: 70px;
-    margin-bottom: -6rem;
+    /* margin-bottom: -6rem; */
   }
   .div-animaLetras p {
     font-size: 20px;
