@@ -78,7 +78,9 @@ figure {
 
 .div-trapezoide {
   position: relative;
-  background-color: rgba(121, 21, 21, 0.4);
+  background-color: rgba(161, 147, 147, 0.3);
+  box-shadow: inset 0px 0px 60px 50px #1a1313;
+  mix-blend-mode: overlay; 
   /* Color de fondo con transparencia */
   transform-origin: bottom;
   transform: perspective(30px) rotateX(3deg);
@@ -96,10 +98,10 @@ figure {
 
 @keyframes animacion {
   from {
-    transform: translateY(30%);
+    transform: translateY(80%);
   }
   to {
-    transform: translateY(-45%);
+    transform: translateY(-100%);
   }
 }
 
