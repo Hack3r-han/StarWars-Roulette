@@ -151,8 +151,8 @@ function placeName() {
     container.appendChild(warior);
     container.appendChild
 
-    const randomX = Math.floor(Math.random() * (window.innerWidth * .5));
-    const randomY = Math.floor(Math.random() * (window.innerHeight * .5)) ;
+    const randomX = Math.floor(Math.random() * (window.innerWidth * .9));
+    const randomY = Math.floor(Math.random() * (window.innerHeight * .9)) ;
 
     console.log(randomY);
 

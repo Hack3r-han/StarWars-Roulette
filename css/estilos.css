@@ -24,7 +24,7 @@ header {
 }
 
 .imgLogo {
-  max-height: 150px;
+  max-height: 120px;
 }
 
 /* ------------- Section - contenedor principal ------------- */
@@ -42,16 +42,15 @@ header {
 /* 1. div letras */
 .div-pLetras p {
   color: #4bd5ee;
-  font-size: 32px;
-  font-weight: 900;
+  font-size: 26px;
   text-align: center;
-  margin-top: 4rem;
+  margin-top: 2rem;
 }
 
 /* 2. div Animación */
 .div-anima {
   position: relative;
-  top: 15%;
+  top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
@@ -92,7 +91,8 @@ header {
 
 /* 3. div Boton de inicio */
 .img-Yoda {
-  width: 30%; 
+  margin-top: -100px;
+  width: 20%;
 }
 .boton-inicio {
   text-align: center;
@@ -109,7 +109,7 @@ header {
 }
 
 .boton-inicio:hover {
-  background-color: rgba(170, 185, 41, 0.7); 
+  background-color: rgba(170, 185, 41, 0.7);
 }
 
 /* FOOTER */
@@ -118,8 +118,7 @@ header {
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
   background-color: #000000;
-  /* padding: 30px; */
-  /* margin-top: auto; */
+  padding: 10px;
 }
 
 .social-media {

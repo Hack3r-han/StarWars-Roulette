@@ -17,15 +17,14 @@ header {
 }
 
 .imgLogo {
-  height: 150px;
+  height: 120px;
 }
 
-.instrucciones1{
+.instrucciones1 {
   color: #4bd5ee;
   font-size: 26px;
   line-height: 16px;
   text-align: center;
-  padding: 1rem;
 }
 
 input[type="text"] {
@@ -41,8 +40,7 @@ input::placeholder {
 }
 
 #agregar-btn,
-#elimina-btn
-{
+#elimina-btn {
   /* margin: 10px; */
   text-align: center;
   padding: 10px;
@@ -65,16 +63,14 @@ input::placeholder {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-
 }
 .relativePosition {
   position: relative;
 }
 
-
 .img-Yoda {
   margin-top: 30px;
-  width: 120%;
+  width: 80%;
   display: block;
 }
 
@@ -85,7 +81,6 @@ input::placeholder {
   transform: scale(1);
   position: absolute;
   left: -100%;
-
 }
 
 .img-btn-play:hover {
@@ -109,9 +104,8 @@ input::placeholder {
   gap: 2rem;
 }
 
-
 .img-btn-reiniciar {
-  display: block;
+  display: none;
   height: 3em;
   margin-top: 2rem;
   transition: all 0.5s ease;
@@ -188,7 +182,6 @@ h5 {
 }
 .choice {
   width: 90px;
-  height: 55px;
   border-radius: 50%;
   color: #cf19c3;
   position: fixed;
@@ -199,12 +192,12 @@ h5 {
   top: 50%;
   left: 50%;
   font-size: 24px;
-  padding-top: 5rem; 
+  padding: 3rem;
 }
 
 .pulse {
-  animation: pulse-animation 0.8s infinite,
-  rotate 3s linear infinite, orbit 12s ease-in-out, change-size 4s infinite;
+  animation: pulse-animation 0.8s infinite, rotate 3s linear infinite,
+    orbit 12s ease-in-out, change-size 4s infinite;
 }
 
 .change-size {
@@ -235,8 +228,8 @@ h5 {
     height: 45px;
   }
   50% {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
   }
   100% {
     width: 45px;
@@ -256,11 +249,7 @@ h5 {
   }
 }
 
-
-
 /* Media Queries RESPONSIVE */
-
-
 
 @media screen and (max-width: 500px) {
   .imgLogo {
@@ -268,9 +257,9 @@ h5 {
   }
   .instrucciones1,
   .instrucciones2 {
-  font-size: 16px;
-  line-height: 16px;
-  padding: 4px;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 4px;
   }
   .img-btn-play {
     height: 5em;
@@ -278,14 +267,14 @@ h5 {
 
   #agregar-btn,
   #elimina-btn {
-  font-size: 15px;
-  padding: 7px;
+    font-size: 15px;
+    padding: 7px;
   }
   input[type="text"] {
     padding: 8px;
     font-size: 15px;
   }
-  
+
   .img-Yoda {
     width: 80%;
     margin: 40px auto 0;
@@ -359,4 +348,3 @@ h5 {
     margin: 30px auto 0;
   }
 }
-
