@@ -319,7 +319,7 @@ h5 {
 }
 
 /* Estilos para smartphones máximo 390x850 */
-@media screen and (max-width: 390px) and (max-height: 850) {
+@media screen and (max-width: 400px) and (max-height: 1200px) {
   .imgLogo {
     height: 80px;
   }

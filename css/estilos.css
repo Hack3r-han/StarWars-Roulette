@@ -9,6 +9,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  flex-grow: 1;
 }
 
 /* main {
@@ -32,6 +33,7 @@ header {
   background: url("../images/bg-img.png") center/cover no-repeat;
   display: flex;
   justify-content: center;
+  min-height: 80vh;
 }
 
 .div-Principal {
@@ -91,7 +93,7 @@ header {
 
 /* 3. div Boton de inicio */
 .img-Yoda {
-  margin-top: -100px;
+  margin-top: 10px;
   width: 20%;
 }
 .boton-inicio {
@@ -194,10 +196,7 @@ a {
 
 /* Responsive smartphones de máximo 400x850 */
 @media screen and (max-width: 400px) and (max-height: 1200px) {
-  section {
-    height: 80vh;
-  }
-
+ 
   header {
     margin-bottom: 0px;
   }
@@ -218,6 +217,10 @@ a {
   .div-animaLetras p {
     font-size: 16px;
     padding: 0 0.5rem;
+  }
+
+  .img-Yoda {
+  width: 100px;
   }
 
   .boton-inicio {

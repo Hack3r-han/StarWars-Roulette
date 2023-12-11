@@ -35,19 +35,6 @@ window.onload = function () {
   };
 };
 
-// ********* Función para mostrar el listado completo de nombresArray **********
-
-  // let listadoNombres = document.getElementById("listadoNombres");
-
-  /* listadoNombres.innerHTML = "";
-
-  nombresArray.forEach((name) => {
-    let listItem = document.createElement("li");
-    listItem.textContent = name;
-    listadoNombres.appendChild(listItem);
-  }); */
-
-
 // ********* Función para agregar un elemento al array **********
 function agregarNombre() {
   let addElementInput = document.getElementById("nombreInput");
