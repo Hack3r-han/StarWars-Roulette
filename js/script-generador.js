@@ -1,5 +1,5 @@
 // ********* Array de base *********
-let nombresArray = ["Maxuel", "Alicia", "Jose", "Jander", "Yessi", "Anzuly", "Neimy", "Hannah",
+let nombresArray = ["Maxuel", "Alicia", "Jose", "Jander", "Yessi", "Anzuly", "Neymi", "Hannah",
    "Isaac", "David", "Paolo", "Alba", "Joaco", "Denisse", "Alfredo", "Marcela", "Laudy",
   "Victor", "Yady", "Alvaro", "Roxana", "Elena",
 ];
@@ -35,20 +35,6 @@ window.onload = function () {
   };
 };
 
-// ********* Función para mostrar el listado completo de nombresArray **********
-
-  // let listadoNombres = document.getElementById("listadoNombres");
-
-  /* listadoNombres.innerHTML = "";
-
-  nombresArray.forEach((name) => {
-    let listItem = document.createElement("li");
-    listItem.textContent = name;
-    listadoNombres.appendChild(listItem);
-  }); */
-
-
-// ********* Función para agregar un elemento al array **********
 function agregarNombre() {
   let addElementInput = document.getElementById("nombreInput");
   let newName = addElementInput.value.trim();
