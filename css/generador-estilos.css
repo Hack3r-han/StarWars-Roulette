@@ -62,15 +62,15 @@ input::placeholder {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin: 1rem auto;
 }
 .relativePosition {
   position: relative;
 }
 
 .img-Yoda {
-  margin-top: 30px;
   width: 80%;
+  padding-bottom: 20px;
   display: block;
 }
 
@@ -80,7 +80,9 @@ input::placeholder {
   transition: all 0.5s ease;
   transform: scale(1);
   position: absolute;
-  left: -100%;
+  margin-top: 1rem;
+  left: -200%;
+  top: -80%;
 }
 
 .img-btn-play:hover {
@@ -105,12 +107,13 @@ input::placeholder {
 }
 
 .img-btn-reiniciar {
-  display: block;
   height: 3em;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   transition: all 0.5s ease;
   transform: scale(1);
   position: absolute;
+  left: -80%;
+  top: -90%;
 }
 
 .img-btn-reiniciar:hover {

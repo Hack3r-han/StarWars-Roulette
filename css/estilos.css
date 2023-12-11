@@ -144,7 +144,7 @@ a {
   justify-content: center;
   align-items: center;
   color: #f4db00;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 /* RESPONSIVE */
@@ -184,16 +184,20 @@ a {
   }
 
   .footer {
-    padding: 10px;
+    padding: 5px;
   }
 
   .copyright {
-    font-size: 9px;
+    font-size: 14px;
   }
 }
 
 /* Responsive smartphones de máximo 400x850 */
-@media screen and (max-width: 400px) and (max-height: 850px) {
+@media screen and (max-width: 400px) and (max-height: 1200px) {
+  section {
+    height: 80vh;
+  }
+
   header {
     margin-bottom: 0px;
   }
@@ -227,7 +231,8 @@ a {
   }
 
   .footer {
-    /* padding: 8px;  */
+    padding: 4px; 
+    height: 5vh;
   }
 
   .copyright {
