@@ -6,7 +6,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
-  height: 100vh;
+  height: 100vh; 
 }
 
 /* ---------- Header ----------- */
@@ -26,7 +26,6 @@ header {
   background: url("../images/bg-img.png") center/cover no-repeat;
   display: flex;
   justify-content: center;
-  height: 80vh;
 }
 
 .div-Principal {
@@ -168,10 +167,6 @@ a {
     padding: 0 1rem;
   }
 
-  .img-Yoda {
-    width: 20%;
-  }
-
   .boton-inicio {
     padding: 5px 10px;
     font-size: 11px;
@@ -213,10 +208,6 @@ a {
   .div-animaLetras p {
     font-size: 16px;
     padding: 0 0.5rem;
-  }
-
-  .img-Yoda {
-    width: 15%;
   }
 
   .boton-inicio {
