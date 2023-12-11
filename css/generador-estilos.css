@@ -258,7 +258,7 @@ h5 {
 
 
 
-/* Media Queries */
+/* Media Queries RESPONSIVE */
 
 
 
@@ -292,5 +292,71 @@ h5 {
   }
 }
 
+/* Estilos tablets 840*1200 máximo */
+@media screen and (max-width: 840px) and (max-height: 1200px) {
+  .imgLogo {
+    height: 100px;
+  }
 
+  .instrucciones1,
+  .instrucciones2 {
+    font-size: 16px;
+    line-height: 16px;
+    padding: 4px;
+  }
+
+  .img-btn-play {
+    height: 5em;
+  }
+
+  #agregar-btn,
+  #elimina-btn {
+    font-size: 15px;
+    padding: 7px;
+  }
+
+  input[type="text"] {
+    padding: 8px;
+    font-size: 15px;
+  }
+
+  .img-Yoda {
+    width: 80%;
+    margin: 40px auto 0;
+  }
+}
+
+/* Estilos para smartphones máximo 390x850 */
+@media screen and (max-width: 390px) and (max-height: 850px) {
+  .imgLogo {
+    height: 80px;
+  }
+
+  .instrucciones1,
+  .instrucciones2 {
+    font-size: 14px;
+    line-height: 14px;
+    padding: 3px;
+  }
+
+  .img-btn-play {
+    height: 4em;
+  }
+
+  #agregar-btn,
+  #elimina-btn {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  input[type="text"] {
+    padding: 7px;
+    font-size: 14px;
+  }
+
+  .img-Yoda {
+    width: 60%;
+    margin: 30px auto 0;
+  }
+}
 
