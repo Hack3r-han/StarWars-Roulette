@@ -9,6 +9,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  flex-grow: 1;
 }
 
 /* main {
@@ -32,6 +33,7 @@ header {
   background: url("../images/bg-img.png") center/cover no-repeat;
   display: flex;
   justify-content: center;
+  min-height: 80vh;
 }
 
 .div-Principal {
@@ -91,7 +93,7 @@ header {
 
 /* 3. div Boton de inicio */
 .img-Yoda {
-  margin-top: -100px;
+  margin-top: 10px;
   width: 20%;
 }
 .boton-inicio {
@@ -144,7 +146,7 @@ a {
   justify-content: center;
   align-items: center;
   color: #f4db00;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 /* RESPONSIVE */
@@ -184,16 +186,17 @@ a {
   }
 
   .footer {
-    padding: 10px;
+    padding: 5px;
   }
 
   .copyright {
-    font-size: 9px;
+    font-size: 14px;
   }
 }
 
 /* Responsive smartphones de máximo 400x850 */
-@media screen and (max-width: 400px) and (max-height: 850px) {
+@media screen and (max-width: 400px) and (max-height: 1200px) {
+ 
   header {
     margin-bottom: 0px;
   }
@@ -216,6 +219,10 @@ a {
     padding: 0 0.5rem;
   }
 
+  .img-Yoda {
+  width: 100px;
+  }
+
   .boton-inicio {
     padding: 5px 8px;
     font-size: 10px;
@@ -227,7 +234,8 @@ a {
   }
 
   .footer {
-    /* padding: 8px;  */
+    padding: 4px; 
+    height: 5vh;
   }
 
   .copyright {

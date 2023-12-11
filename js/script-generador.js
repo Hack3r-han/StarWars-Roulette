@@ -137,14 +137,14 @@ function placeName() {
     container.appendChild(warior);
     container.appendChild
 
-    const randomX = Math.floor(Math.random() * (window.innerWidth * .9));
-    const randomY = Math.floor(Math.random() * (window.innerHeight * .9)) ;
+    const randomX = Math.floor(Math.random() * (innerWidth));
+    const randomY = Math.floor(Math.random() * (innerHeight));
 
     console.log(randomY);
 
     warior.style.position = "absolute";
-    warior.style.left = `${randomX}px`;
-    warior.style.top = `${randomY}px`;
+    warior.style.left = `${randomX /1.1}px`;
+    warior.style.top = `${randomY /1.1}px`;
     warior.style.borderRadius = "50%";
     warior.style.backgroundColor = "yellow"
   }
