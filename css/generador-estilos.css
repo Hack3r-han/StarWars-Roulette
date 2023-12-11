@@ -136,9 +136,9 @@ input::placeholder {
   background: url("../images/bg-img.png") center/cover no-repeat;
   margin: auto;
   padding: 20px;
-  border: 2px solid #f4db00;
-  width: 80%;
-  height: 85%;
+  /* border: 2px solid #f4db00; */
+  width: 90%;
+  height: 90%;
 }
 
 .cerrar {
@@ -163,8 +163,6 @@ input::placeholder {
   background-color: rgb(255, 119, 0);
   background-image: radial-gradient(rgb(255, 111, 0), rgb(255, 234, 0));
   opacity: 0.8;
-  margin-top: 200px;
-  margin-left: 200px;
 }
 
 h5 {
@@ -182,20 +180,24 @@ h5 {
   padding: 0.6rem;
   margin: 3rem auto;
   border: #f4db00 3px solid;
+  z-index: 5;
 }
 .choice {
-  width: 90px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
-  color: #cf19c3;
-  position: fixed;
-  background-color: rgb(12, 231, 202);
+  color: #e7320e;
   text-align: center;
-  border: rgba(192, 113, 113, 0.2) 6px solid;
-  box-shadow: 0 0 20px 30px;
-  top: 50%;
-  left: 50%;
+  position: fixed;
+  background-color: rgba(232, 172, 18, 0.95);
+  border: rgba(225, 38, 38, 0.2) 6px solid;
+  box-shadow: 0 0 50px 40px;
+  top: 40vh;
+  left: 45vw;
   font-size: 24px;
-  padding: 3rem;
+  padding: 2rem;
+  margin: 0 auto ;
+  z-index: 2;
 }
 
 .pulse {
@@ -222,33 +224,33 @@ h5 {
   }
 
   100% {
-    transform: rotate(360deg);
+    transform: rotate(720deg);
   }
 }
 @keyframes change-size {
   0% {
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
   }
   50% {
-    width: 180px;
-    height: 180px;
+    width: 105px;
+    height: 105px;
   }
   100% {
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
   }
 }
 
 @keyframes font-size {
   0% {
-    font-size: 11px;
+    font-size: 10px;
   }
   50% {
-    font-size: 40px;
+    font-size: 20px;
   }
   100% {
-    font-size: 11px;
+    font-size: 7px;
   }
 }
 
