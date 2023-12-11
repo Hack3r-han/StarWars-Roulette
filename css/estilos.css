@@ -74,24 +74,24 @@ header {
   font-weight: bolder;
   font-size: 28px;
   text-align: justify;
-  animation: animacion 6s linear infinite;
+  transform: translateY(500%);
+  animation: animacion 15s linear infinite;
   padding: 0 1rem;
 }
 
 @keyframes animacion {
   from {
-    transform: translateY(450%);
+    transform: translateY(500%);
   }
   to {
-    transform: translateY(-100%);
+    transform: translateY(-650%);
   }
 }
 
 /* 3. div Boton de inicio */
 .img-Yoda {
-  width: 30%;
+  width: 30%; 
 }
-
 .boton-inicio {
   text-align: center;
   padding: 5px 10px; 
