@@ -355,6 +355,10 @@ h5 {
   }
 
   .choice {
-    left: 32vw;
+    left: 35vw;
+  }
+  .img-btn-play {
+    left: -160%;
+    top: -80%;
   }
 }
