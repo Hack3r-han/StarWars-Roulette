@@ -65,6 +65,7 @@ input::placeholder {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+
 }
 .relativePosition {
   position: relative;
@@ -79,7 +80,7 @@ input::placeholder {
 
 .img-btn-play {
   display: block;
-  height: 5em;
+  height: 5rem;
   transition: all 0.5s ease;
   transform: scale(1);
   position: absolute;
@@ -99,6 +100,15 @@ input::placeholder {
   padding: 1rem;
   margin-top: 3rem;
 }
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
 
 .img-btn-reiniciar {
   display: block;
@@ -151,34 +161,54 @@ input::placeholder {
 /* Modal Styles */
 
 .warior {
-  width: 60px;
-  height: 60px;
+  width: 45px;
+  height: 45px;
   background-color: rgb(255, 119, 0);
   background-image: radial-gradient(rgb(255, 111, 0), rgb(255, 234, 0));
-  padding-top: 10px;
   opacity: 0.8;
-  margin-left: 100px;
-  margin-top: 100px;
+  margin-top: 200px;
+  margin-left: 200px;
 }
 
 h5 {
   text-align: center;
-  padding-top: -20%;
-  color: yellow;
+  color: rgba(31, 19, 19, 0.861);
+  font-size: 11px;
 }
 
 .play {
+  display: block;
   color: #4bd5ee;
   font-size: 24px;
   background-color: #5d5404;
-  border-radius: 20%;
+  border-radius: 10%;
   padding: 0.6rem;
-  margin-top: 2rem;
+  margin: 3rem auto;
   border: #f4db00 3px solid;
+}
+.choice {
+  width: 90px;
+  height: 55px;
+  border-radius: 50%;
+  color: #cf19c3;
+  position: fixed;
+  background-color: rgb(12, 231, 202);
+  text-align: center;
+  border: rgba(192, 113, 113, 0.2) 6px solid;
+  box-shadow: 0 0 20px 30px;
+  top: 50%;
+  left: 50%;
+  font-size: 24px;
+  padding-top: 5rem; 
 }
 
 .pulse {
-  animation: pulse-animation 0.8s infinite;
+  animation: pulse-animation 0.8s infinite,
+  rotate 3s linear infinite, orbit 12s ease-in-out, change-size 4s infinite;
+}
+
+.change-size {
+  animation: font-size 4s infinite;
 }
 
 @keyframes pulse-animation {
@@ -189,44 +219,41 @@ h5 {
     box-shadow: 0 0 0 20px rgba(236, 239, 54, 0);
   }
 }
-.spin {
-  animation: spin 3s linear infinite;
-}
-@keyframes spin {
+
+@keyframes rotate {
   0% {
     transform: rotate(0deg);
   }
-  30% {
-    transform: rotate(40deg);
+
+  100% {
+    transform: rotate(360deg);
   }
-  60% {
-    transform: rotate(0deg);
+}
+@keyframes change-size {
+  0% {
+    width: 45px;
+    height: 45px;
+  }
+  50% {
+    width: 200px;
+    height: 200px;
   }
   100% {
-    transform: rotate(40deg);
+    width: 45px;
+    height: 45px;
   }
 }
-.choice {
-  width: 120px;
-  height: 90px;
-  border-radius: 50%;
-  color: #4bd5ee;
-  position: fixed;
-  top: 30%;
-  left: 50%;
-  background-color: rgb(10, 4, 58);
-  text-align: center;
-  padding-top: 8%;
-  border: #4bd5ee 4px solid;
-}
 
-.buttonContainer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  text-align: center;
-  justify-content: center;
-  gap: 2rem;
+@keyframes font-size {
+  0% {
+    font-size: 11px;
+  }
+  50% {
+    font-size: 40px;
+  }
+  100% {
+    font-size: 11px;
+  }
 }
 
 

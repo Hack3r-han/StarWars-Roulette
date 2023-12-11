@@ -1,7 +1,7 @@
 // ********* Array de base *********
-let nombresArray = ["Maxwell", "Alicia", "Jose", "Jander", "Yessi", "Anzuly", "Neimy", "Hanna",
-  // "Isaac", "David", "Paolo", "Alba", "Joaco", "Denisse", "Alfredo", "Marcela", "Laudy",
-  // "Victor", "Yady", "Alvaro", "Roxana", "Elena",
+let nombresArray = ["Maxuel", "Alicia", "Jose", "Jander", "Yessi", "Anzuly", "Neimy", "Hannah",
+   "Isaac", "David", "Paolo", "Alba", "Joaco", "Denisse", "Alfredo", "Marcela", "Laudy",
+  "Victor", "Yady", "Alvaro", "Roxana", "Elena",
 ];
 
 // ********* Función para elegir nombre aleatorio y reproducir sonido R2D2 **********
@@ -135,31 +135,6 @@ function mostrarModal() {
   placeName()
 }
 
-// const names = [
-//   "David",
-//   "Laudy",
-//   "Hannah",
-//   "Paolo",
-//   "Alba",
-//   "Roxana",
-//   "Alvaro",
-  // "Alfredo",
-  // "Maxuel",
-  // "Anzuly",
-  // "Neymi",
-  // "Jose",
-  // "Juaco",
-  // "Isaac",
-  // "Yessenia",
-  // "Alicia",
-  // "Victor",
-  // "Viviana",
-  // "Raul",
-  // "Jander",
-  // "Denisse",
-  // "Marcela",
-  // "Elena",]
-
 
 function chooseName() {
   let index = Math.floor(Math.random() * nombresArray.length);
@@ -171,8 +146,8 @@ function placeName() {
   const container = document.querySelector(".contenido-modal");
   for (let i = 0; i < nombresArray.length; i++) {
     const warior = document.createElement("div");
-    warior.className = "warior pulse ";
-    warior.innerHTML = `<h5>${chooseName()}</h5>`;
+    warior.className = "warior pulse";
+    warior.innerHTML = `<h5 class="change-size">${chooseName()}</h5>`;
     container.appendChild(warior);
     container.appendChild
 
