@@ -2,13 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/Vader.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ruleta</title>
+    <title>Star Wars Ruleta</title>
     <link rel="stylesheet" type="text/css" href="css/estilos.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+    <script src="js/script-generador.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        let starWarsTheme = document.getElementById('starWarsTheme');
+        starWarsTheme.volume = 0.1;
+      });
+    </script>
   </head>
 
   <body>
@@ -74,9 +82,7 @@
 
           <!--          Boton Inicio  - vicula a la siguiente página       -->
           <div>
-            <a href="generador-index.html">
-              <button class="boton-inicio">Tu aventura comienza aquí</button>
-            </a>
+            <button onclick="playYodaAndRedirect()" class="boton-inicio">Tu aventura comienza aquí</button>
           </div>
         </div>
       </div>
@@ -93,5 +99,9 @@
         </div>
       </div>
     </footer>
+
+    <!-- Audio para el sonido -->
+    <audio id="starWarsTheme" src="/sounds/star_wars.mp3" autoplay loop></audio>
+    <audio id="audioYoda" src="/sounds/yoda_force.mp3"></audio>
   </body>
 </html>
