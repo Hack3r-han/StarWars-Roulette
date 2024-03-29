@@ -1,7 +1,7 @@
 // ********* Array de base *********
-let nombresArray = ["Maxwell", "Alicia", "Jose", "Mercedes", "Jander", "Yessi", "Anzuly", "Neimy", "Hanna",
-  // "Isaac", "Juanjo", "David", "Paolo", "Alba", "Joaco", "Alberto", "Denisse", "Alfredo", "Marcela", "Laudy",
-  // "Victor", "Yady", "Alvaro", "Roxana", "Elena",
+let nombresArray = ["Maxuel", "Alicia", "Jose", "Jander", "Yessi", "Anzuly", "Neymi", "Hannah",
+   "Isaac", "David", "Paolo", "Alba", "Joaco", "Denisse", "Alfredo", "Marcela", "Laudy",
+  "Victor", "Yady", "Alvaro", "Roxana", "Elena",
 ];
 
 // ********* Función para elegir nombre aleatorio y reproducir sonido R2D2 **********
@@ -35,20 +35,6 @@ window.onload = function () {
   };
 };
 
-// ********* Función para mostrar el listado completo de nombresArray **********
-
-  // let listadoNombres = document.getElementById("listadoNombres");
-
-  /* listadoNombres.innerHTML = "";
-
-  nombresArray.forEach((name) => {
-    let listItem = document.createElement("li");
-    listItem.textContent = name;
-    listadoNombres.appendChild(listItem);
-  }); */
-
-
-// ********* Función para agregar un elemento al array **********
 function agregarNombre() {
   let addElementInput = document.getElementById("nombreInput");
   let newName = addElementInput.value.trim();
@@ -135,31 +121,6 @@ function mostrarModal() {
   placeName()
 }
 
-// const names = [
-//   "David",
-//   "Laudy",
-//   "Hannah",
-//   "Paolo",
-//   "Alba",
-//   "Roxana",
-//   "Alvaro",
-  // "Alfredo",
-  // "Maxuel",
-  // "Anzuly",
-  // "Neymi",
-  // "Jose",
-  // "Juaco",
-  // "Isaac",
-  // "Yessenia",
-  // "Alicia",
-  // "Victor",
-  // "Viviana",
-  // "Raul",
-  // "Jander",
-  // "Denisse",
-  // "Marcela",
-  // "Elena",]
-
 
 function chooseName() {
   let index = Math.floor(Math.random() * nombresArray.length);
@@ -171,19 +132,19 @@ function placeName() {
   const container = document.querySelector(".contenido-modal");
   for (let i = 0; i < nombresArray.length; i++) {
     const warior = document.createElement("div");
-    warior.className = "warior pulse ";
-    warior.innerHTML = `<h5>${chooseName()}</h5>`;
+    warior.className = "warior pulse";
+    warior.innerHTML = `<h5 class="change-size">${chooseName()}</h5>`;
     container.appendChild(warior);
     container.appendChild
 
-    const randomX = Math.floor(Math.random() * window.innerWidth);
-    const randomY = Math.floor(Math.random() * window.innerHeight);
+    const randomX = Math.floor(Math.random() * (innerWidth));
+    const randomY = Math.floor(Math.random() * (innerHeight));
 
     console.log(randomY);
 
     warior.style.position = "absolute";
-    warior.style.left = `${randomX}px`;
-    warior.style.top = `${randomY}px`;
+    warior.style.left = `${randomX /1.1}px`;
+    warior.style.top = `${randomY /1.1}px`;
     warior.style.borderRadius = "50%";
     warior.style.backgroundColor = "yellow"
   }
@@ -200,7 +161,10 @@ function playRoulette() {
   h1.className = "choice";
 }
 
-let contenido = document.querySelector(".contenido-modal")
-contenido.textContent = "HELP"
-
 playRoulette();
+
+const audio = new Audio("../sounds/keyboard.mp3");
+
+const buttonSound = document.querySelector(".sound")
+buttonSound.addEventListener("click", () => { audio.play();
+  });
