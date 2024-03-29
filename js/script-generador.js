@@ -35,6 +35,8 @@ window.onload = function () {
   };
 };
 
+// ********* Función para agregar nombre y reproducir sonido Yes Master **********
+
 function agregarNombre() {
   let addElementInput = document.getElementById("nombreInput");
   let newName = addElementInput.value.trim();
@@ -46,7 +48,7 @@ function agregarNombre() {
   }
 }
 
-// ********* Función para eliminar un elemento del array y reproducir sonido Chewbaca **********
+// ********* Función para eliminar nombre y reproducir sonido Chewbaca **********
 function eliminarNombre() {
   let removeElementInput = document.getElementById("nombreEliminar");
   let nameToRemove = removeElementInput.value.trim();
@@ -64,23 +66,18 @@ function eliminarNombre() {
   }
 }
 
-// ********* Función para reproducir sonido R2D2 **********
-function reproducirSonido(idAudio) {
-  let audio = document.getElementById(idAudio);
-  audio.play();
-}
-
-// ********* Función para reproducir sonido Pistol al hacer clic en el botón de reinicio **********
-function reproducirSonidoPistolDesdeBoton() {
-  reproducirSonido('audioPistol');
-}
-
 // ********* Función para redireccionar a la página de inicio **********
 function redireccionarInicio() {
   window.location.href = "/index.html";
 }
 
-// ********* Agregar más funciones según sea necesario *********
+// SONIDOS
+
+// ********* Función general para reproducir sonidos **********
+function reproducirSonido(idAudio) {
+  let audio = document.getElementById(idAudio);
+  audio.play();
+}
 
 // ********* Agrega el elemento de audio para R2D2 *********
 function reproducirSonidoR2D2() {
@@ -100,10 +97,16 @@ function reproducirSonidoChewbaca() {
   audioChewbaca.play();
 }
 
-// ********* Agrega el elemento de audio para Pistol *********
-function reproducirSonidoPistol() {
-  let audioPistol = document.getElementById('audioPistol');
-  audioPistol.play();
+// ********* Agrega el elemento de audio para Yoda *********
+function playYodaAndRedirect() {
+  let starWarsTheme = document.getElementById('starWarsTheme');
+  starWarsTheme.pause();
+  
+  reproducirSonido('audioYoda');
+  
+  setTimeout(function() {
+    window.location.href = "generador-index.html";
+  }, 3000); 
 }
 
 

@@ -68,8 +68,9 @@ input::placeholder {
   position: relative;
 }
 
-.img-Yoda {
-  width: 80%;
+.img-bb8 {
+  width: 30%;
+  padding-left: 100px;
   padding-bottom: 20px;
   display: block;
 }

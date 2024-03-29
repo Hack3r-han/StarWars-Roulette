@@ -47,13 +47,13 @@
     <div class="placeButton">
       <div>
         <img
-          class="img-Yoda"
-          src="images/baby-yoda 1.png"
-          alt="Imagen de yoda"
+          class="img-bb8"
+          src="images/bb8-droid.png"
+          alt="Imagen de bb8"
         />
       </div>
       <div class="relativePosition">
-        <button onclick="mostrarModal()">
+        <button onclick="mostrarModal(); reproducirSonidoR2D2()">
           <img src="images/play-btn.png" alt="Botón" class="img-btn-play" />
         </button>
       </div>
@@ -66,7 +66,7 @@
       <!-- Boton de ir a inicio (cambiado código para correcciones)-->
       <div class="relativePosition">
         <a href="index.html">
-        <button onclick="reproducirSonidoPistolDesdeBoton(); redireccionarInicio();">
+        <button onclick="redireccionarInicio();">
             <img
               src="images/return-btn.png"
               alt="Botón"
@@ -85,7 +85,6 @@
     </div>
 
     <!-- Audio para el sonido -->
-    <audio id="audioPistol" src="/sounds/pistol.mp3"></audio>
     <audio id="audioYesMaster" src="/sounds/yesmaster.mp3"></audio>
     <audio id="audioChewbaca" src="/sounds/chewbaca.mp3"></audio>
     <audio id="audioR2D2" src="/sounds/r2d2.mp3"></audio>
